@@ -9,7 +9,7 @@
 using namespace std;
 
 JoystickOnex::JoystickOnex()
-        : joy_fd(-1), num_of_axis(0), num_of_buttons(0)
+        : joy_fd(-1), num_of_axis(0), num_of_buttons(0), mDeadBand(2000)
 {
     joy_open = Open();
 }
@@ -38,24 +38,31 @@ bool JoystickOnex::Open()
 
 bool JoystickOnex::Read()
 {
+
     js_event js;
-
     read(joy_fd, &js, sizeof(js_event));
-
     switch (js.type & ~JS_EVENT_INIT)
     {
         case JS_EVENT_AXIS:
-            if((int)js.number>=joy_axis.size())
+            if(((int)js.value > mDeadBand)||((int)js.value < -mDeadBand))
             {
-                cerr<<"err:"<<(int)js.number<<endl;
+                int sign;
+                if((int)js.value > 0)
+                {
+                    sign = 1;
+                }
+                else
+                {
+                    sign = -1;
+                }
+                joy_button[(int)js.number] = js.value - sign * mDeadBand;
             }
-            joy_axis[(int)js.number]= js.value;
+            else
+            {
+                joy_button[(int)js.number] = 0;
+            }
             break;
         case JS_EVENT_BUTTON:
-            if((int)js.number>=joy_button.size())
-            {
-                cerr<<"err:"<<(int)js.number<<endl;
-            }
             joy_button[(int)js.number]= js.value;
             break;
     }

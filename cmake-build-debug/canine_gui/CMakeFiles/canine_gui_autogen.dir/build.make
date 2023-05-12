@@ -53,10 +53,10 @@ RM = /snap/clion/235/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sangjun/QT_TCP/QtTCPClient
+CMAKE_SOURCE_DIR = /home/sangjun/QtTCPClient
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sangjun/QtTCPClient/cmake-build-debug
 
 # Utility rule file for canine_gui_autogen.
 
@@ -67,8 +67,8 @@ include canine_gui/CMakeFiles/canine_gui_autogen.dir/compiler_depend.make
 include canine_gui/CMakeFiles/canine_gui_autogen.dir/progress.make
 
 canine_gui/CMakeFiles/canine_gui_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target canine_gui"
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui && /snap/clion/235/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui/CMakeFiles/canine_gui_autogen.dir/AutogenInfo.json Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target canine_gui"
+	cd /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui && /snap/clion/235/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui/CMakeFiles/canine_gui_autogen.dir/AutogenInfo.json Debug
 
 canine_gui_autogen: canine_gui/CMakeFiles/canine_gui_autogen
 canine_gui_autogen: canine_gui/CMakeFiles/canine_gui_autogen.dir/build.make
@@ -79,10 +79,10 @@ canine_gui/CMakeFiles/canine_gui_autogen.dir/build: canine_gui_autogen
 .PHONY : canine_gui/CMakeFiles/canine_gui_autogen.dir/build
 
 canine_gui/CMakeFiles/canine_gui_autogen.dir/clean:
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui && $(CMAKE_COMMAND) -P CMakeFiles/canine_gui_autogen.dir/cmake_clean.cmake
+	cd /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui && $(CMAKE_COMMAND) -P CMakeFiles/canine_gui_autogen.dir/cmake_clean.cmake
 .PHONY : canine_gui/CMakeFiles/canine_gui_autogen.dir/clean
 
 canine_gui/CMakeFiles/canine_gui_autogen.dir/depend:
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sangjun/QT_TCP/QtTCPClient /home/sangjun/QT_TCP/QtTCPClient/canine_gui /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui/CMakeFiles/canine_gui_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sangjun/QtTCPClient /home/sangjun/QtTCPClient/canine_gui /home/sangjun/QtTCPClient/cmake-build-debug /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui/CMakeFiles/canine_gui_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : canine_gui/CMakeFiles/canine_gui_autogen.dir/depend
 

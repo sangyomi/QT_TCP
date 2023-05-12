@@ -54,10 +54,10 @@ RM = /snap/clion/235/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sangjun/QT_TCP/QtTCPClient
+CMAKE_SOURCE_DIR = /home/sangjun/QtTCPClient
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sangjun/QtTCPClient/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -100,14 +100,14 @@ canine_gui/clean: canine_gui/CMakeFiles/canine_gui_autogen.dir/clean
 CMakeFiles/QtTCPClient.dir/all: CMakeFiles/QtTCPClient_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtTCPClient.dir/build.make CMakeFiles/QtTCPClient.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtTCPClient.dir/build.make CMakeFiles/QtTCPClient.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target QtTCPClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target QtTCPClient"
 .PHONY : CMakeFiles/QtTCPClient.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/QtTCPClient.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/QtTCPClient.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/QtTCPClient.dir/rule
 
 # Convenience name for target.
@@ -126,14 +126,14 @@ CMakeFiles/QtTCPClient.dir/clean:
 CMakeFiles/QtTCPClient_autogen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtTCPClient_autogen.dir/build.make CMakeFiles/QtTCPClient_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtTCPClient_autogen.dir/build.make CMakeFiles/QtTCPClient_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=8 "Built target QtTCPClient_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=8 "Built target QtTCPClient_autogen"
 .PHONY : CMakeFiles/QtTCPClient_autogen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/QtTCPClient_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/QtTCPClient_autogen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/QtTCPClient_autogen.dir/rule
 
 # Convenience name for target.
@@ -152,14 +152,14 @@ CMakeFiles/QtTCPClient_autogen.dir/clean:
 canine_gui/CMakeFiles/canine_gui.dir/all: canine_gui/CMakeFiles/canine_gui_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/depend
 	$(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=9,10,11,12 "Built target canine_gui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=9,10,11,12 "Built target canine_gui"
 .PHONY : canine_gui/CMakeFiles/canine_gui.dir/all
 
 # Build rule for subdir invocation for target.
 canine_gui/CMakeFiles/canine_gui.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 canine_gui/CMakeFiles/canine_gui.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles 0
 .PHONY : canine_gui/CMakeFiles/canine_gui.dir/rule
 
 # Convenience name for target.
@@ -178,14 +178,14 @@ canine_gui/CMakeFiles/canine_gui.dir/clean:
 canine_gui/CMakeFiles/canine_gui_autogen.dir/all:
 	$(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui_autogen.dir/build.make canine_gui/CMakeFiles/canine_gui_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui_autogen.dir/build.make canine_gui/CMakeFiles/canine_gui_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=13 "Built target canine_gui_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=13 "Built target canine_gui_autogen"
 .PHONY : canine_gui/CMakeFiles/canine_gui_autogen.dir/all
 
 # Build rule for subdir invocation for target.
 canine_gui/CMakeFiles/canine_gui_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 canine_gui/CMakeFiles/canine_gui_autogen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles 0
 .PHONY : canine_gui/CMakeFiles/canine_gui_autogen.dir/rule
 
 # Convenience name for target.

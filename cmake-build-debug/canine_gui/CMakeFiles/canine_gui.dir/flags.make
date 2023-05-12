@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
 
-CXX_INCLUDES = -I/home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui/canine_gui_autogen/include -I/home/sangjun/QT_TCP/QtTCPClient/include -I/home/sangjun/QT_TCP/QtTCPClient/canine_gui/include -I/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
+CXX_INCLUDES = -I/home/sangjun/QtTCPClient/cmake-build-debug/canine_gui/canine_gui_autogen/include -I/home/sangjun/QtTCPClient/include -I/home/sangjun/QtTCPClient/canine_gui/include -I/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
 
 CXX_FLAGS = -g -fdiagnostics-color=always -fPIC
 

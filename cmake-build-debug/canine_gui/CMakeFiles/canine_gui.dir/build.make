@@ -53,10 +53,10 @@ RM = /snap/clion/235/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sangjun/QT_TCP/QtTCPClient
+CMAKE_SOURCE_DIR = /home/sangjun/QtTCPClient
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sangjun/QtTCPClient/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include canine_gui/CMakeFiles/canine_gui.dir/depend.make
@@ -72,44 +72,44 @@ include canine_gui/CMakeFiles/canine_gui.dir/flags.make
 canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o: canine_gui/CMakeFiles/canine_gui.dir/flags.make
 canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o: canine_gui/canine_gui_autogen/mocs_compilation.cpp
 canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o: canine_gui/CMakeFiles/canine_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o"
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o -MF CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o -c /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui/canine_gui_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o"
+	cd /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o -MF CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o -c /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui/canine_gui_autogen/mocs_compilation.cpp
 
 canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.i"
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui/canine_gui_autogen/mocs_compilation.cpp > CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.i
+	cd /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui/canine_gui_autogen/mocs_compilation.cpp > CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.i
 
 canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.s"
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui/canine_gui_autogen/mocs_compilation.cpp -o CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.s
+	cd /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui/canine_gui_autogen/mocs_compilation.cpp -o CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.s
 
 canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o: canine_gui/CMakeFiles/canine_gui.dir/flags.make
-canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o: /home/sangjun/QT_TCP/QtTCPClient/canine_gui/include/canine_gui/mainwindow.cpp
+canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o: /home/sangjun/QtTCPClient/canine_gui/include/canine_gui/mainwindow.cpp
 canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o: canine_gui/CMakeFiles/canine_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o"
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o -MF CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o.d -o CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o -c /home/sangjun/QT_TCP/QtTCPClient/canine_gui/include/canine_gui/mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o"
+	cd /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o -MF CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o.d -o CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o -c /home/sangjun/QtTCPClient/canine_gui/include/canine_gui/mainwindow.cpp
 
 canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.i"
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sangjun/QT_TCP/QtTCPClient/canine_gui/include/canine_gui/mainwindow.cpp > CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.i
+	cd /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sangjun/QtTCPClient/canine_gui/include/canine_gui/mainwindow.cpp > CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.i
 
 canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.s"
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sangjun/QT_TCP/QtTCPClient/canine_gui/include/canine_gui/mainwindow.cpp -o CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.s
+	cd /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sangjun/QtTCPClient/canine_gui/include/canine_gui/mainwindow.cpp -o CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.s
 
 canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o: canine_gui/CMakeFiles/canine_gui.dir/flags.make
-canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o: /home/sangjun/QT_TCP/QtTCPClient/canine_gui/include/canine_gui/qcustomplot.cpp
+canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o: /home/sangjun/QtTCPClient/canine_gui/include/canine_gui/qcustomplot.cpp
 canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o: canine_gui/CMakeFiles/canine_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o"
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o -MF CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o.d -o CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o -c /home/sangjun/QT_TCP/QtTCPClient/canine_gui/include/canine_gui/qcustomplot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o"
+	cd /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o -MF CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o.d -o CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o -c /home/sangjun/QtTCPClient/canine_gui/include/canine_gui/qcustomplot.cpp
 
 canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.i"
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sangjun/QT_TCP/QtTCPClient/canine_gui/include/canine_gui/qcustomplot.cpp > CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.i
+	cd /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sangjun/QtTCPClient/canine_gui/include/canine_gui/qcustomplot.cpp > CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.i
 
 canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.s"
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sangjun/QT_TCP/QtTCPClient/canine_gui/include/canine_gui/qcustomplot.cpp -o CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.s
+	cd /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sangjun/QtTCPClient/canine_gui/include/canine_gui/qcustomplot.cpp -o CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.s
 
 # Object files for target canine_gui
 canine_gui_OBJECTS = \
@@ -125,19 +125,19 @@ canine_gui/libcanine_gui.a: canine_gui/CMakeFiles/canine_gui.dir/include/canine_
 canine_gui/libcanine_gui.a: canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o
 canine_gui/libcanine_gui.a: canine_gui/CMakeFiles/canine_gui.dir/build.make
 canine_gui/libcanine_gui.a: canine_gui/CMakeFiles/canine_gui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libcanine_gui.a"
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui && $(CMAKE_COMMAND) -P CMakeFiles/canine_gui.dir/cmake_clean_target.cmake
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/canine_gui.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libcanine_gui.a"
+	cd /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui && $(CMAKE_COMMAND) -P CMakeFiles/canine_gui.dir/cmake_clean_target.cmake
+	cd /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/canine_gui.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 canine_gui/CMakeFiles/canine_gui.dir/build: canine_gui/libcanine_gui.a
 .PHONY : canine_gui/CMakeFiles/canine_gui.dir/build
 
 canine_gui/CMakeFiles/canine_gui.dir/clean:
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui && $(CMAKE_COMMAND) -P CMakeFiles/canine_gui.dir/cmake_clean.cmake
+	cd /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui && $(CMAKE_COMMAND) -P CMakeFiles/canine_gui.dir/cmake_clean.cmake
 .PHONY : canine_gui/CMakeFiles/canine_gui.dir/clean
 
 canine_gui/CMakeFiles/canine_gui.dir/depend:
-	cd /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sangjun/QT_TCP/QtTCPClient /home/sangjun/QT_TCP/QtTCPClient/canine_gui /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui /home/sangjun/QT_TCP/QtTCPClient/cmake-build-debug/canine_gui/CMakeFiles/canine_gui.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sangjun/QtTCPClient /home/sangjun/QtTCPClient/canine_gui /home/sangjun/QtTCPClient/cmake-build-debug /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui/CMakeFiles/canine_gui.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : canine_gui/CMakeFiles/canine_gui.dir/depend
 

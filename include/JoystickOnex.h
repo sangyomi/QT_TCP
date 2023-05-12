@@ -20,6 +20,7 @@ private:
     int joy_fd, num_of_axis, num_of_buttons;
     char name_of_joystick[80];
     bool joy_open;
+    int mDeadBand;
 
 public:
     std::vector<char> joy_button;
