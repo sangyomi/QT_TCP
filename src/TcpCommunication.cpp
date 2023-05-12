@@ -47,6 +47,7 @@ void serializeJoystickInfo(QDataStream &stream) {
     stream << joystickAxis->RightTrigger;
     stream << joystickAxis->DpadX;
     stream << joystickAxis->DpadY;
+
     stream << joystickButton->FaceButtonA;
     stream << joystickButton->FaceButtonB;
     stream << joystickButton->FaceButtonX;
@@ -69,17 +70,17 @@ void deserializeJoystickInfo(QDataStream &stream) {
     stream >> joystickAxis->RightTrigger;
     stream >> joystickAxis->DpadX;
     stream >> joystickAxis->DpadY;
-    stream >> joystickButton->FaceButtonA;
-    stream >> joystickButton->FaceButtonB;
-    stream >> joystickButton->FaceButtonX;
-    stream >> joystickButton->FaceButtonY;
-    stream >> joystickButton->LeftBumper;
-    stream >> joystickButton->RightBumper;
-    stream >> joystickButton->Back;
-    stream >> joystickButton->Start;
-    stream >> joystickButton->Guide;
-    stream >> joystickButton->LeftStick;
-    stream >> joystickButton->RightStick;
+    stream.readRawData(reinterpret_cast<char*>(joystickButton->FaceButtonA), sizeof(char));
+    stream.readRawData(reinterpret_cast<char*>(joystickButton->FaceButtonB), sizeof(char));
+    stream.readRawData(reinterpret_cast<char*>(joystickButton->FaceButtonX), sizeof(char));
+    stream.readRawData(reinterpret_cast<char*>(joystickButton->FaceButtonY), sizeof(char));
+    stream.readRawData(reinterpret_cast<char*>(joystickButton->LeftBumper), sizeof(char));
+    stream.readRawData(reinterpret_cast<char*>(joystickButton->RightBumper), sizeof(char));
+    stream.readRawData(reinterpret_cast<char*>(joystickButton->Back), sizeof(char));
+    stream.readRawData(reinterpret_cast<char*>(joystickButton->Start), sizeof(char));
+    stream.readRawData(reinterpret_cast<char*>(joystickButton->Guide), sizeof(char));
+    stream.readRawData(reinterpret_cast<char*>(joystickButton->LeftStick), sizeof(char));
+    stream.readRawData(reinterpret_cast<char*>(joystickButton->RightStick), sizeof(char));
 }
 
 void deserializeSharedMemoryInfo (QDataStream &stream)
@@ -181,6 +182,36 @@ void deserializeSharedMemoryInfo (QDataStream &stream)
     stream.readRawData(reinterpret_cast<char*>(sharedCustom->customVariableInt), MAX_COMMAND_DATA * sizeof(int));
 }
 
+void printJoystickValue()
+{
+    std::cout << "axis/10000: ";
+
+    std::cout << " " << std::setw(2) << (double)joystickAxis->LeftStickX;
+    std::cout << " " << std::setw(2) << (double)joystickAxis->LeftStickY;
+    std::cout << " " << std::setw(2) << (double)joystickAxis->LeftTrigger;
+    std::cout << " " << std::setw(2) << (double)joystickAxis->RightStickX;
+    std::cout << " " << std::setw(2) << (double)joystickAxis->RightStickY;
+    std::cout << " " << std::setw(2) << (double)joystickAxis->RightTrigger;
+    std::cout << " " << std::setw(2) << (double)joystickAxis->DpadX;
+    std::cout << " " << std::setw(2) << (double)joystickAxis->DpadY << std::endl;
+
+    std::cout << "  button: ";
+
+    std::cout << " " << (double)joystickButton->FaceButtonA;
+    std::cout << " " << (double)joystickButton->FaceButtonB;
+    std::cout << " " << (double)joystickButton->FaceButtonX;
+    std::cout << " " << (double)joystickButton->FaceButtonY;
+    std::cout << " " << (double)joystickButton->LeftBumper;
+    std::cout << " " << (double)joystickButton->RightBumper;
+    std::cout << " " << (double)joystickButton->Back;
+    std::cout << " " << (double)joystickButton->Start;
+    std::cout << " " << (double)joystickButton->Guide;
+    std::cout << " " << (double)joystickButton->LeftStick;
+    std::cout << " " << (double)joystickButton->RightStick;
+
+    std::cout << std::endl;
+}
+
 void* sendData(void* arg)
 {
     while (1)
@@ -188,7 +219,7 @@ void* sendData(void* arg)
         Onex.Read();
         transJoystick();
 
-        const QHostAddress serverAddress("192.168.0.113");
+        const QHostAddress serverAddress("192.168.0.");
         const quint16 serverPort = 12345;
 
         QTcpSocket* socket = new QTcpSocket();
@@ -211,39 +242,44 @@ void* sendData(void* arg)
             socket->write(byteArray);
             socket->flush();
 
-            if (socket->waitForReadyRead()) {
-                QDataStream in(socket);
-                in.setVersion(QDataStream::Qt_5_0);
+            socket->disconnectFromHost();
+            socket->deleteLater();
 
-                qint64 blockSize = 0;
-                if (socket->bytesAvailable() < sizeof(qint64)) {
-                    socket->waitForReadyRead();
-                }
-                in >> blockSize;
+            printJoystickValue();
 
-                QByteArray data;
-                while (socket->bytesAvailable() < blockSize) {
-                    socket->waitForReadyRead();
-                }
-                data = socket->read(blockSize);
-
-                QDataStream dataStream(&data, QIODevice::ReadOnly);
-
-                deserializeJoystickInfo(dataStream);
-
-                if (dataStream.status() != QDataStream::Ok) {
-                    qWarning() << "Error while reading data: " << dataStream.status();
-                }
-                else
-                {
-//                    qDebug() << "serializeJoystickInfo is done";
-//                    qDebug() << "joystickButton->FaceButtonA:" << joystickButton->FaceButtonA;
-//                    qDebug() << "joystickAxis->LeftTrigger:" << joystickAxis->LeftTrigger;
-                }
-
-                socket->disconnectFromHost();
-                socket->deleteLater();
-            }
+//            if (socket->waitForReadyRead()) {
+//                QDataStream in(socket);
+//                in.setVersion(QDataStream::Qt_5_0);
+//
+//                qint64 blockSize = 0;
+//                if (socket->bytesAvailable() < sizeof(qint64)) {
+//                    socket->waitForReadyRead();
+//                }
+//                in >> blockSize;
+//
+//                QByteArray data;
+//                while (socket->bytesAvailable() < blockSize) {
+//                    socket->waitForReadyRead();
+//                }
+//                data = socket->read(blockSize);
+//
+//                QDataStream dataStream(&data, QIODevice::ReadOnly);
+//
+////                deserializeJoystickInfo(dataStream);
+//
+//                if (dataStream.status() != QDataStream::Ok) {
+//                    qWarning() << "Error while reading data: " << dataStream.status();
+//                }
+//                else
+//                {
+////                    qDebug() << "serializeJoystickInfo is done";
+////                    qDebug() << "joystickButton->FaceButtonA:" << joystickButton->FaceButtonA;
+////                    qDebug() << "joystickAxis->LeftTrigger:" << joystickAxis->LeftTrigger;
+//                }
+//
+//                socket->disconnectFromHost();
+//                socket->deleteLater();
+//            }
         } else {
             qWarning() << "Could not connect to server: " << socket->errorString();
         }
@@ -289,9 +325,6 @@ void* receiveData(void* arg)
                 {
 //                    qDebug() << "deserializeSharedMemoryInfo is done";
 //                    qDebug() << "sharedCommand->userCommand: " << sharedCommand->userCommand;
-//                    qDebug() << "sharedCommand->userParamChar: " << sharedCommand->userParamChar;
-//                    qDebug() << "sharedCommand->userParamInt: " << sharedCommand->userParamInt[0];
-//                    qDebug() << "sharedCommand->userParamDouble: " << sharedCommand->userParamDouble[0];
                 }
 
                 QByteArray requestData;

@@ -55,11 +55,11 @@ bool JoystickOnex::Read()
                 {
                     sign = -1;
                 }
-                joy_button[(int)js.number] = js.value - sign * mDeadBand;
+                joy_axis[(int)js.number] = js.value - sign * mDeadBand;
             }
             else
             {
-                joy_button[(int)js.number] = 0;
+                joy_axis[(int)js.number] = 0;
             }
             break;
         case JS_EVENT_BUTTON:

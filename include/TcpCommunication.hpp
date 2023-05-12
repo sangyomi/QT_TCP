@@ -25,5 +25,6 @@ void transJoystick();
 void serializeJoystickInfo(QDataStream &stream);
 void deserializeJoystickInfo(QDataStream &stream);
 void deserializeSharedMemoryInfo (QDataStream &stream);
+void printJoystickValue();
 
 #endif //QTTCPCLIENT_TCPCOMMUNICATION_HPP
