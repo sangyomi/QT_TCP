@@ -11,11 +11,9 @@
 #define CMD_dT              0.002
 #define HIGH_CONTROL_dT     0.02
 #define LOW_CONTROL_dT      0.002
-//#define GAIT_PERIOD         0.4
-#define GAIT_PERIOD         0.8
 #define CAN_dT              0.0025
 #define VISUAL_dT           0.01
-#define IMU_dT              0.001
+#define IMU_dT              0.005
 #define ESTIMATOR_dT        0.002
 #define MAX_COMMAND_DATA    10
 #define MAX_CUSTOM_DATA     20
@@ -23,9 +21,6 @@
 #define R2D                 57.2957802
 #define D2R                 0.0174533
 #define MPC_HORIZON         5
-
-constexpr double SWING_LEG_LIFT_UP_DURATION = GAIT_PERIOD / 2;
-constexpr double FOOT_RADIUS = 0.0;
 
 typedef struct _UI_COMMAND_
 {
@@ -38,12 +33,14 @@ typedef struct _UI_COMMAND_
 
 typedef struct _SHM_
 {
+    //Gait
     int gaitTable[MPC_HORIZON*4];
     int gaitState;
     double gaitPeriod;
     double swingPeriod;
     double standPeriod;
     bool gaitChangeFlag;
+
     bool throwFlag;
 
     bool isNan;
