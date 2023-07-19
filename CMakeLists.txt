@@ -9,7 +9,7 @@ find_package(Qt5 COMPONENTS Widgets Network REQUIRED)
 
 include_directories(include)
 
-add_executable(QtTCPClient src/main.cpp src/JoystickOnex.cpp src/TcpCommunication.cpp canine_gui/include/canine_gui/mainwindow.cpp canine_gui/include/canine_gui/qcustomplot.cpp)
+add_executable(QtTCPClient src/main.cpp src/JoystickOnex.cpp src/TcpCommunication.cpp canine_gui/include/canine_gui/mainwindow.cpp canine_gui/include/canine_gui/qcustomplot.cpp src/ThreadGenerator.cpp)
 
 add_subdirectory(canine_gui)
 
@@ -20,3 +20,5 @@ include_directories(
 target_link_libraries(QtTCPClient Qt5::Widgets Qt5::Network)
 
 target_link_libraries(QtTCPClient pthread)
+
+add_executable(test_joystick src/TestJoystick.cpp)

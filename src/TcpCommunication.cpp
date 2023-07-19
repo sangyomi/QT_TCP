@@ -9,7 +9,7 @@ extern pUI_COMMAND sharedCommand;
 extern pSHM sharedMemory;
 extern pCUSTOM_DATA sharedCustom;
 
-
+pthread_t JoystickReader;
 pthread_t QtServer;
 pthread_t QtClient;
 
@@ -99,42 +99,64 @@ void deserializeSharedMemoryInfo (QDataStream &stream)
     // SHM
     stream.readRawData(reinterpret_cast<char*>(sharedMemory->gaitTable), MPC_HORIZON*4 * sizeof(int));
     stream >> sharedMemory->gaitState;
-    stream >> sharedMemory->gaitIteration;
+    stream >> sharedMemory->gaitPeriod;
+    stream >> sharedMemory->swingPeriod;
+    stream >> sharedMemory->standPeriod;
     stream >> sharedMemory->gaitChangeFlag;
     stream >> sharedMemory->throwFlag;
 
+    stream >> sharedMemory->isNan;
+    stream >> sharedMemory->isRamp;
     stream >> sharedMemory->bIsEndHome;
     stream >> sharedMemory->newCommand;
+
     stream >> sharedMemory->canLFStatus;
     stream >> sharedMemory->canRFStatus;
     stream >> sharedMemory->canLBStatus;
     stream >> sharedMemory->canRBStatus;
+
     stream >> sharedMemory->motorStatus;
     stream >> sharedMemory->motorLFState;
     stream >> sharedMemory->motorRFState;
     stream >> sharedMemory->motorLBState;
     stream >> sharedMemory->motorRBState;
+
+    stream >> sharedMemory->FSMState;
     stream >> sharedMemory->LowControlState;
     stream >> sharedMemory->HighControlState;
     stream >> sharedMemory->visualState;
+
     stream >> sharedMemory->canLFState;
     stream >> sharedMemory->canRFState;
     stream >> sharedMemory->canLBState;
     stream >> sharedMemory->canRBState;
+
+    stream >> sharedMemory->localTime;
+
     stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorErrorStatus), MOTOR_NUM * sizeof(int));
     stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorTemp), MOTOR_NUM * sizeof(int));
-    stream >> sharedMemory->localTime;
+    stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorVoltage), MOTOR_NUM * sizeof(double));
+    stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorPosition), MOTOR_NUM * sizeof(double));
+    stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorTorque), MOTOR_NUM * sizeof(double));
+    stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorDesiredPosition), MOTOR_NUM * sizeof(double));
+    stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorDesiredVelocity), MOTOR_NUM * sizeof(double));
+    stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorDesiredTorque), MOTOR_NUM * sizeof(double));
+    stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorPrevDesiredPosition), MOTOR_NUM * sizeof(double));
 
     stream >> sharedMemory->basePosition(0) >> sharedMemory->basePosition(1) >> sharedMemory->basePosition(2);
     stream >> sharedMemory->baseVelocity(0) >> sharedMemory->baseVelocity(1) >> sharedMemory->baseVelocity(2);
+    stream >> sharedMemory->baseQuartPosition(0) >> sharedMemory->baseQuartPosition(1) >> sharedMemory->baseQuartPosition(2) >> sharedMemory->baseQuartPosition(3);
     stream >> sharedMemory->baseDesiredPosition(0) >> sharedMemory->baseDesiredPosition(1) >> sharedMemory->baseDesiredPosition(2);
     stream >> sharedMemory->baseDesiredVelocity(0) >> sharedMemory->baseDesiredVelocity(1) >> sharedMemory->baseDesiredVelocity(2);
-    stream >> sharedMemory->baseQuartPosition(0) >> sharedMemory->baseQuartPosition(1) >> sharedMemory->baseQuartPosition(2) >> sharedMemory->baseQuartPosition(3);
     stream >> sharedMemory->baseDesiredQuartPosition(0) >> sharedMemory->baseDesiredQuartPosition(1) >> sharedMemory->baseDesiredQuartPosition(2) >> sharedMemory->baseDesiredQuartPosition(3);
     stream >> sharedMemory->baseDesiredEulerPosition(0) >> sharedMemory->baseDesiredEulerPosition(1) >> sharedMemory->baseDesiredEulerPosition(2);
     stream >> sharedMemory->baseDesiredEulerVelocity(0) >> sharedMemory->baseDesiredEulerVelocity(1) >> sharedMemory->baseDesiredEulerVelocity(2);
-    stream >> sharedMemory->FSMState;
-    stream >> sharedMemory->isNan;
+    stream >> sharedMemory->baseLocalDesiredVelocity(0) >> sharedMemory->baseLocalDesiredVelocity(1) >> sharedMemory->baseLocalDesiredVelocity(2);
+    stream.readRawData(reinterpret_cast<char*>(sharedMemory->baseEulerPosition), 3 * sizeof(double));
+    stream.readRawData(reinterpret_cast<char*>(sharedMemory->baseEulerVelocity), 3 * sizeof(double));
+    stream.readRawData(reinterpret_cast<char*>(sharedMemory->baseAcceleration), 3 * sizeof(double));
+
+
     for (int i = 0 ; i < 4 ; ++i){
         stream >> sharedMemory->pdTorque[i](0) >> sharedMemory->pdTorque[i](1) >> sharedMemory->pdTorque[i](2);
     }
@@ -154,21 +176,12 @@ void deserializeSharedMemoryInfo (QDataStream &stream)
         stream >> sharedMemory->visualPosition[i](0) >> sharedMemory->visualPosition[i](1) >> sharedMemory->visualPosition[i](2);
     }
 
-    stream.readRawData(reinterpret_cast<char*>(sharedMemory->baseAcceleration), 3 * sizeof(double));
-    stream.readRawData(reinterpret_cast<char*>(sharedMemory->baseEulerPosition), 3 * sizeof(double));
-    stream.readRawData(reinterpret_cast<char*>(sharedMemory->baseEulerVelocity), 3 * sizeof(double));
-    stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorPosition), MOTOR_NUM * sizeof(double));
-    stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorDesiredPosition), MOTOR_NUM * sizeof(double));
-    stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorPrevDesiredPosition), MOTOR_NUM * sizeof(double));
-    stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorVelocity), MOTOR_NUM * sizeof(double));
-    stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorDesiredVelocity), MOTOR_NUM * sizeof(double));
-    stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorTorque), MOTOR_NUM * sizeof(double));
-    stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorDesiredTorque), MOTOR_NUM * sizeof(double));
-    stream.readRawData(reinterpret_cast<char*>(sharedMemory->motorVoltage), MOTOR_NUM * sizeof(double));
-
-    stream.readRawData(reinterpret_cast<char*>(sharedMemory->contactState), 4 * sizeof(double));
-
-    stream.readRawData(reinterpret_cast<char*>(sharedMemory->tempIMU), 3 * sizeof(double));
+    stream.readRawData(reinterpret_cast<char*>(sharedMemory->contactState), 4 * sizeof(bool));
+    stream.readRawData(reinterpret_cast<char*>(sharedMemory->tempRes), 4 * sizeof(double));
+    stream >> sharedMemory->simulContactForceFL;
+    stream >> sharedMemory->simulContactForceFR;
+    stream >> sharedMemory->simulContactForceHL;
+    stream >> sharedMemory->simulContactForceHR;
 
     stream.readRawData(reinterpret_cast<char*>(sharedMemory->testBasePos), 3 * sizeof(double));
     stream.readRawData(reinterpret_cast<char*>(sharedMemory->testBaseVel), 3 * sizeof(double));
@@ -178,8 +191,8 @@ void deserializeSharedMemoryInfo (QDataStream &stream)
     }
 
     // CUSTOM_DATA
-    stream.readRawData(reinterpret_cast<char*>(sharedCustom->customVariableDouble), MAX_COMMAND_DATA * sizeof(double));
-    stream.readRawData(reinterpret_cast<char*>(sharedCustom->customVariableInt), MAX_COMMAND_DATA * sizeof(int));
+    stream.readRawData(reinterpret_cast<char*>(sharedCustom->customVariableDouble), MAX_CUSTOM_DATA * sizeof(double));
+    stream.readRawData(reinterpret_cast<char*>(sharedCustom->customVariableInt), MAX_CUSTOM_DATA * sizeof(int));
 }
 
 void printJoystickValue()
@@ -214,19 +227,21 @@ void printJoystickValue()
 
 void* sendData(void* arg)
 {
-    while (1)
+    struct timespec TIME_NEXT;
+    struct timespec TIME_NOW;
+
+//    const QHostAddress serverAddress("192.168.0.137");
+    const QHostAddress serverAddress("10.42.0.1");
+    const quint16 serverPort = 12345;
+
+    while (true)
     {
-        Onex.Read();
-        transJoystick();
-
-        const QHostAddress serverAddress("192.168.0.");
-        const quint16 serverPort = 12345;
-
+        clock_gettime(CLOCK_REALTIME, &TIME_NEXT);
         QTcpSocket* socket = new QTcpSocket();
         socket->connectToHost(serverAddress, serverPort);
 
-        if (socket->waitForConnected()) {
-
+        if(socket->waitForConnected())
+        {
             QByteArray byteArray;
             QDataStream stream(&byteArray, QIODevice::WriteOnly);
 
@@ -244,50 +259,23 @@ void* sendData(void* arg)
 
             socket->disconnectFromHost();
             socket->deleteLater();
-
-            printJoystickValue();
-
-//            if (socket->waitForReadyRead()) {
-//                QDataStream in(socket);
-//                in.setVersion(QDataStream::Qt_5_0);
-//
-//                qint64 blockSize = 0;
-//                if (socket->bytesAvailable() < sizeof(qint64)) {
-//                    socket->waitForReadyRead();
-//                }
-//                in >> blockSize;
-//
-//                QByteArray data;
-//                while (socket->bytesAvailable() < blockSize) {
-//                    socket->waitForReadyRead();
-//                }
-//                data = socket->read(blockSize);
-//
-//                QDataStream dataStream(&data, QIODevice::ReadOnly);
-//
-////                deserializeJoystickInfo(dataStream);
-//
-//                if (dataStream.status() != QDataStream::Ok) {
-//                    qWarning() << "Error while reading data: " << dataStream.status();
-//                }
-//                else
-//                {
-////                    qDebug() << "serializeJoystickInfo is done";
-////                    qDebug() << "joystickButton->FaceButtonA:" << joystickButton->FaceButtonA;
-////                    qDebug() << "joystickAxis->LeftTrigger:" << joystickAxis->LeftTrigger;
-//                }
-//
-//                socket->disconnectFromHost();
-//                socket->deleteLater();
-//            }
-        } else {
-            qWarning() << "Could not connect to server: " << socket->errorString();
         }
+       else
+       {
+            qWarning() << "Could not connect to server: " << socket->errorString();
+       }
+        clock_gettime(CLOCK_REALTIME, &TIME_NOW);
+        std::cout << "[COMMUNICATION] send data Thread time : " << timediff_us(&TIME_NEXT, &TIME_NOW) * 0.001 << " ms"<<std::endl;
+        usleep(20000);
     }
+
 }
 
 void* receiveData(void* arg)
 {
+    struct timespec TIME_NEXT;
+    struct timespec TIME_NOW;
+
     const QHostAddress serverAddress(QHostAddress::Any);
     const quint16 serverPort = 34567;
 
@@ -295,6 +283,7 @@ void* receiveData(void* arg)
     server.listen(serverAddress, serverPort);
 
     while (server.isListening()) {
+        clock_gettime(CLOCK_REALTIME, &TIME_NEXT);
         if (server.waitForNewConnection()) {
             QTcpSocket *socket = server.nextPendingConnection();
 
@@ -341,9 +330,20 @@ void* receiveData(void* arg)
                 socket->deleteLater();
             }
         }
+        clock_gettime(CLOCK_REALTIME, &TIME_NOW);
+//        std::cout << "[COMMUNICATION] receive data Thread time : " << timediff_us(&TIME_NEXT, &TIME_NOW) * 0.001 << " ms"<<std::endl;
+        usleep(100);
     }
 }
 
+void* ReadJoystick(void* arg)
+{
+    while(true)
+    {
+        Onex.Read();
+        transJoystick();
+    }
+}
 void StartCommunication()
 {
     joystickAxis = (pAXIS)malloc(sizeof(AXIS));
@@ -352,8 +352,8 @@ void StartCommunication()
     sharedMemory = (pSHM)malloc(sizeof(SHM));
     sharedCustom = (pCUSTOM_DATA)malloc(sizeof(CUSTOM_DATA));
 
-    pthread_create(&QtClient,NULL,sendData,NULL);
-    pthread_create(&QtServer,NULL,receiveData,NULL);
-    pthread_join(QtClient,NULL);
-    pthread_join(QtServer,NULL);
+    int thread_id_nrt = generate_nrt_thread(JoystickReader, ReadJoystick, "joystick_thread", 4, NULL);
+    sleep(1);
+    int thread_id_rt1 = generate_rt_thread(QtClient, sendData, "client_thread", 5, 0, NULL);
+    int thread_id_rt2 = generate_rt_thread(QtServer, receiveData, "server_thread", 6, 0, NULL);
 }

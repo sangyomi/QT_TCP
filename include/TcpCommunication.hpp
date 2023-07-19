@@ -17,6 +17,8 @@
 #include "SharedMemory.hpp"
 #include "RobotDescription.hpp"
 #include "JoystickInfo.hpp"
+#include "ThreadGenerator.hpp"
+
 
 void StartCommunication();
 void* sendData(void* arg);

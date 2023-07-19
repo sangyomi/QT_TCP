@@ -40,42 +40,64 @@ typedef struct _SHM_
 {
     int gaitTable[MPC_HORIZON*4];
     int gaitState;
-    int gaitIteration;
+    double gaitPeriod;
+    double swingPeriod;
+    double standPeriod;
     bool gaitChangeFlag;
     bool throwFlag;
 
+    bool isNan;
+    bool isRamp;
     bool bIsEndHome;
     bool newCommand;
+
     bool canLFStatus;
     bool canRFStatus;
     bool canLBStatus;
     bool canRBStatus;
+
     bool motorStatus;
     bool motorLFState;
     bool motorRFState;
     bool motorLBState;
     bool motorRBState;
+
+    int FSMState;
     int LowControlState;
     int HighControlState;
     int visualState;
+
     int canLFState;
     int canRFState;
     int canLBState;
     int canRBState;
+
+    double localTime;
+
     int motorErrorStatus[MOTOR_NUM];
     int motorTemp[MOTOR_NUM];
-    double localTime;
+    double motorVoltage[MOTOR_NUM];
+    double motorPosition[MOTOR_NUM];
+    double motorVelocity[MOTOR_NUM];
+    double motorTorque[MOTOR_NUM];
+    double motorDesiredPosition[MOTOR_NUM];
+    double motorDesiredVelocity[MOTOR_NUM];
+    double motorDesiredTorque[MOTOR_NUM];
+    double motorPrevDesiredPosition[MOTOR_NUM];
 
     Vec3<double> basePosition;
     Vec3<double> baseVelocity;
+    Vec4<double> baseQuartPosition;
     Vec3<double> baseDesiredPosition;
     Vec3<double> baseDesiredVelocity;
-    Vec4<double> baseQuartPosition;
     Vec4<double> baseDesiredQuartPosition;
     Vec3<double> baseDesiredEulerPosition;
     Vec3<double> baseDesiredEulerVelocity;
-    int FSMState;
-    bool isNan;
+    Vec3<double> baseLocalDesiredVelocity;
+    double baseEulerPosition[3];
+    double baseEulerVelocity[3];
+    double baseAcceleration[3];
+
     Vec3<double> pdTorque[4];
     Vec3<double> mpcTorque[4];
     Vec3<double> bodyFootPosition[4];
@@ -83,23 +105,14 @@ typedef struct _SHM_
     Vec3<double> desiredFootPosition[4];
     Vec3<double> visualPosition[4];
 
-    double baseAcceleration[3];
-    double baseEulerPosition[3];
-    double baseEulerVelocity[3];
-
-    double motorPosition[MOTOR_NUM];
-    double motorDesiredPosition[MOTOR_NUM];
-    double motorPrevDesiredPosition[MOTOR_NUM];
-    double motorVelocity[MOTOR_NUM];
-    double motorDesiredVelocity[MOTOR_NUM];
-    double motorTorque[MOTOR_NUM];
-    double motorDesiredTorque[MOTOR_NUM];
-    double motorVoltage[MOTOR_NUM];
-
-    double contactState[4];
-
-    double tempIMU[3];
-
+    /// contact detction
+    bool contactState[4];
+    double tempRes[4];
+    double simulContactForceFL;
+    double simulContactForceFR;
+    double simulContactForceHL;
+    double simulContactForceHR;
+    ///
     double testBasePos[3];
     double testBaseVel[3];
 
