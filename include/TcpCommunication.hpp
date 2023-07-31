@@ -14,11 +14,12 @@
 #include <QThread>
 #include <pthread.h>
 #include "JoystickOnex.h"
+#include "MapGenerator.hpp"
 #include "SharedMemory.hpp"
 #include "RobotDescription.hpp"
 #include "JoystickInfo.hpp"
 #include "ThreadGenerator.hpp"
-
+#include "LocationInfo.hpp"
 
 void StartCommunication();
 void* sendData(void* arg);

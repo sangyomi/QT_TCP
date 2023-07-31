@@ -5,8 +5,10 @@
 #include <QTableWidget>
 #include <QTimer>
 #include <QPen>
+#include <QWebEngineView>
 #include "../include/SharedMemory.hpp"
 #include "../include/RobotDescription.hpp"
+#include "../include/LocationInfo.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,6 +26,11 @@ private slots:
     void DisplayUpdate();
     void GraphUpdate();
     void GraphInitialize();
+    void GpsUpdate();
+    void GpsInitialize();
+    void SavedMapInitialize();
+    void SavedMapGenerator();
+    void SavedMapUpdate();
     void on_BT_CAN_ON_clicked();
     void on_BT_VISUAL_ON_clicked();
     void on_BT_MOTOR_ON_clicked();
@@ -43,9 +50,13 @@ private:
     Ui::MainWindow *ui;
     QTimer      *displayTimer;
     QTimer		*graphTimer;
+    QTimer      *gpsTimer;
+    QTimer      *savedMapTimer;
     double graphOffset;
     bool mIsUpdateGraph;
     void InitTable(QTableWidget *table);
     void InitLineEdit();
+    double angle;
+    QWebEngineView view;
 };
 #endif // MAINWINDOW_H

@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/235/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /snap/clion/246/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/235/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /snap/clion/246/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sangjun/QtTCPClient
+CMAKE_SOURCE_DIR = /home/sangjun/QT_TCP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sangjun/QtTCPClient/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sangjun/QT_TCP/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/sangjun/QtTCPClient/cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/235/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/246/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/235/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/246/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles /home/sangjun/QtTCPClient/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QT_TCP/cmake-build-debug/CMakeFiles /home/sangjun/QT_TCP/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QT_TCP/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -130,6 +130,19 @@ QtTCPClient/fast:
 .PHONY : QtTCPClient/fast
 
 #=============================================================================
+# Target rules for targets named test_joystick
+
+# Build rule for target.
+test_joystick: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_joystick
+.PHONY : test_joystick
+
+# fast build rule for target.
+test_joystick/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_joystick.dir/build.make CMakeFiles/test_joystick.dir/build
+.PHONY : test_joystick/fast
+
+#=============================================================================
 # Target rules for targets named QtTCPClient_autogen
 
 # Build rule for target.
@@ -141,6 +154,19 @@ QtTCPClient_autogen: cmake_check_build_system
 QtTCPClient_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtTCPClient_autogen.dir/build.make CMakeFiles/QtTCPClient_autogen.dir/build
 .PHONY : QtTCPClient_autogen/fast
+
+#=============================================================================
+# Target rules for targets named test_joystick_autogen
+
+# Build rule for target.
+test_joystick_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_joystick_autogen
+.PHONY : test_joystick_autogen
+
+# fast build rule for target.
+test_joystick_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_joystick_autogen.dir/build.make CMakeFiles/test_joystick_autogen.dir/build
+.PHONY : test_joystick_autogen/fast
 
 #=============================================================================
 # Target rules for targets named canine_gui
@@ -264,6 +290,30 @@ src/JoystickOnex.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtTCPClient.dir/build.make CMakeFiles/QtTCPClient.dir/src/JoystickOnex.cpp.s
 .PHONY : src/JoystickOnex.cpp.s
 
+src/MapGenerator.o: src/MapGenerator.cpp.o
+.PHONY : src/MapGenerator.o
+
+# target to build an object file
+src/MapGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtTCPClient.dir/build.make CMakeFiles/QtTCPClient.dir/src/MapGenerator.cpp.o
+.PHONY : src/MapGenerator.cpp.o
+
+src/MapGenerator.i: src/MapGenerator.cpp.i
+.PHONY : src/MapGenerator.i
+
+# target to preprocess a source file
+src/MapGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtTCPClient.dir/build.make CMakeFiles/QtTCPClient.dir/src/MapGenerator.cpp.i
+.PHONY : src/MapGenerator.cpp.i
+
+src/MapGenerator.s: src/MapGenerator.cpp.s
+.PHONY : src/MapGenerator.s
+
+# target to generate assembly for a file
+src/MapGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtTCPClient.dir/build.make CMakeFiles/QtTCPClient.dir/src/MapGenerator.cpp.s
+.PHONY : src/MapGenerator.cpp.s
+
 src/TcpCommunication.o: src/TcpCommunication.cpp.o
 .PHONY : src/TcpCommunication.o
 
@@ -287,6 +337,54 @@ src/TcpCommunication.s: src/TcpCommunication.cpp.s
 src/TcpCommunication.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtTCPClient.dir/build.make CMakeFiles/QtTCPClient.dir/src/TcpCommunication.cpp.s
 .PHONY : src/TcpCommunication.cpp.s
+
+src/TestJoystick.o: src/TestJoystick.cpp.o
+.PHONY : src/TestJoystick.o
+
+# target to build an object file
+src/TestJoystick.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_joystick.dir/build.make CMakeFiles/test_joystick.dir/src/TestJoystick.cpp.o
+.PHONY : src/TestJoystick.cpp.o
+
+src/TestJoystick.i: src/TestJoystick.cpp.i
+.PHONY : src/TestJoystick.i
+
+# target to preprocess a source file
+src/TestJoystick.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_joystick.dir/build.make CMakeFiles/test_joystick.dir/src/TestJoystick.cpp.i
+.PHONY : src/TestJoystick.cpp.i
+
+src/TestJoystick.s: src/TestJoystick.cpp.s
+.PHONY : src/TestJoystick.s
+
+# target to generate assembly for a file
+src/TestJoystick.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_joystick.dir/build.make CMakeFiles/test_joystick.dir/src/TestJoystick.cpp.s
+.PHONY : src/TestJoystick.cpp.s
+
+src/ThreadGenerator.o: src/ThreadGenerator.cpp.o
+.PHONY : src/ThreadGenerator.o
+
+# target to build an object file
+src/ThreadGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtTCPClient.dir/build.make CMakeFiles/QtTCPClient.dir/src/ThreadGenerator.cpp.o
+.PHONY : src/ThreadGenerator.cpp.o
+
+src/ThreadGenerator.i: src/ThreadGenerator.cpp.i
+.PHONY : src/ThreadGenerator.i
+
+# target to preprocess a source file
+src/ThreadGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtTCPClient.dir/build.make CMakeFiles/QtTCPClient.dir/src/ThreadGenerator.cpp.i
+.PHONY : src/ThreadGenerator.cpp.i
+
+src/ThreadGenerator.s: src/ThreadGenerator.cpp.s
+.PHONY : src/ThreadGenerator.s
+
+# target to generate assembly for a file
+src/ThreadGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtTCPClient.dir/build.make CMakeFiles/QtTCPClient.dir/src/ThreadGenerator.cpp.s
+.PHONY : src/ThreadGenerator.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -312,6 +410,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtTCPClient.dir/build.make CMakeFiles/QtTCPClient.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+test_joystick_autogen/mocs_compilation.o: test_joystick_autogen/mocs_compilation.cpp.o
+.PHONY : test_joystick_autogen/mocs_compilation.o
+
+# target to build an object file
+test_joystick_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_joystick.dir/build.make CMakeFiles/test_joystick.dir/test_joystick_autogen/mocs_compilation.cpp.o
+.PHONY : test_joystick_autogen/mocs_compilation.cpp.o
+
+test_joystick_autogen/mocs_compilation.i: test_joystick_autogen/mocs_compilation.cpp.i
+.PHONY : test_joystick_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+test_joystick_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_joystick.dir/build.make CMakeFiles/test_joystick.dir/test_joystick_autogen/mocs_compilation.cpp.i
+.PHONY : test_joystick_autogen/mocs_compilation.cpp.i
+
+test_joystick_autogen/mocs_compilation.s: test_joystick_autogen/mocs_compilation.cpp.s
+.PHONY : test_joystick_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+test_joystick_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_joystick.dir/build.make CMakeFiles/test_joystick.dir/test_joystick_autogen/mocs_compilation.cpp.s
+.PHONY : test_joystick_autogen/mocs_compilation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -322,8 +444,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... QtTCPClient_autogen"
 	@echo "... canine_gui_autogen"
+	@echo "... test_joystick_autogen"
 	@echo "... QtTCPClient"
 	@echo "... canine_gui"
+	@echo "... test_joystick"
 	@echo "... QtTCPClient_autogen/mocs_compilation.o"
 	@echo "... QtTCPClient_autogen/mocs_compilation.i"
 	@echo "... QtTCPClient_autogen/mocs_compilation.s"
@@ -336,12 +460,24 @@ help:
 	@echo "... src/JoystickOnex.o"
 	@echo "... src/JoystickOnex.i"
 	@echo "... src/JoystickOnex.s"
+	@echo "... src/MapGenerator.o"
+	@echo "... src/MapGenerator.i"
+	@echo "... src/MapGenerator.s"
 	@echo "... src/TcpCommunication.o"
 	@echo "... src/TcpCommunication.i"
 	@echo "... src/TcpCommunication.s"
+	@echo "... src/TestJoystick.o"
+	@echo "... src/TestJoystick.i"
+	@echo "... src/TestJoystick.s"
+	@echo "... src/ThreadGenerator.o"
+	@echo "... src/ThreadGenerator.i"
+	@echo "... src/ThreadGenerator.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... test_joystick_autogen/mocs_compilation.o"
+	@echo "... test_joystick_autogen/mocs_compilation.i"
+	@echo "... test_joystick_autogen/mocs_compilation.s"
 .PHONY : help
 
 

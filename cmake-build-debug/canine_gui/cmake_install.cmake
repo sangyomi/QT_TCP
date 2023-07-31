@@ -1,4 +1,4 @@
-# Install script for directory: /home/sangjun/QtTCPClient/canine_gui
+# Install script for directory: /home/sangjun/QT_TCP/canine_gui
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

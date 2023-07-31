@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/sangjun/QtTCPClient/cmake-build-debug/canine_gui/canine_gui_autogen/mocs_compilation.cpp" "canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o" "gcc" "canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o.d"
-  "/home/sangjun/QtTCPClient/canine_gui/include/canine_gui/mainwindow.cpp" "canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o" "gcc" "canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o.d"
-  "/home/sangjun/QtTCPClient/canine_gui/include/canine_gui/qcustomplot.cpp" "canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o" "gcc" "canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o.d"
+  "/home/sangjun/QT_TCP/cmake-build-debug/canine_gui/canine_gui_autogen/mocs_compilation.cpp" "canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o" "gcc" "canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o.d"
+  "/home/sangjun/QT_TCP/canine_gui/include/canine_gui/mainwindow.cpp" "canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o" "gcc" "canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o.d"
+  "/home/sangjun/QT_TCP/canine_gui/include/canine_gui/qcustomplot.cpp" "canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o" "gcc" "canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o.d"
   )
 
 # Targets to which this target links.

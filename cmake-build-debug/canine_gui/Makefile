@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/235/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /snap/clion/246/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/235/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /snap/clion/246/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sangjun/QtTCPClient
+CMAKE_SOURCE_DIR = /home/sangjun/QT_TCP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sangjun/QtTCPClient/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sangjun/QT_TCP/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/sangjun/QtTCPClient/cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/235/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/246/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/235/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/246/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles /home/sangjun/QtTCPClient/cmake-build-debug/canine_gui//CMakeFiles/progress.marks
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 canine_gui/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QtTCPClient/cmake-build-debug/CMakeFiles 0
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QT_TCP/cmake-build-debug/CMakeFiles /home/sangjun/QT_TCP/cmake-build-debug/canine_gui//CMakeFiles/progress.marks
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 canine_gui/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sangjun/QT_TCP/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 canine_gui/clean
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 canine_gui/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 canine_gui/preinstall
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 canine_gui/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 canine_gui/preinstall
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 canine_gui/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 canine_gui/CMakeFiles/canine_gui.dir/rule:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 canine_gui/CMakeFiles/canine_gui.dir/rule
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 canine_gui/CMakeFiles/canine_gui.dir/rule
 .PHONY : canine_gui/CMakeFiles/canine_gui.dir/rule
 
 # Convenience name for target.
@@ -127,12 +127,12 @@ canine_gui: canine_gui/CMakeFiles/canine_gui.dir/rule
 
 # fast build rule for target.
 canine_gui/fast:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/build
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/build
 .PHONY : canine_gui/fast
 
 # Convenience name for target.
 canine_gui/CMakeFiles/canine_gui_autogen.dir/rule:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 canine_gui/CMakeFiles/canine_gui_autogen.dir/rule
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 canine_gui/CMakeFiles/canine_gui_autogen.dir/rule
 .PHONY : canine_gui/CMakeFiles/canine_gui_autogen.dir/rule
 
 # Convenience name for target.
@@ -141,7 +141,7 @@ canine_gui_autogen: canine_gui/CMakeFiles/canine_gui_autogen.dir/rule
 
 # fast build rule for target.
 canine_gui_autogen/fast:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui_autogen.dir/build.make canine_gui/CMakeFiles/canine_gui_autogen.dir/build
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui_autogen.dir/build.make canine_gui/CMakeFiles/canine_gui_autogen.dir/build
 .PHONY : canine_gui_autogen/fast
 
 canine_gui_autogen/mocs_compilation.o: canine_gui_autogen/mocs_compilation.cpp.o
@@ -149,7 +149,7 @@ canine_gui_autogen/mocs_compilation.o: canine_gui_autogen/mocs_compilation.cpp.o
 
 # target to build an object file
 canine_gui_autogen/mocs_compilation.cpp.o:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.o
 .PHONY : canine_gui_autogen/mocs_compilation.cpp.o
 
 canine_gui_autogen/mocs_compilation.i: canine_gui_autogen/mocs_compilation.cpp.i
@@ -157,7 +157,7 @@ canine_gui_autogen/mocs_compilation.i: canine_gui_autogen/mocs_compilation.cpp.i
 
 # target to preprocess a source file
 canine_gui_autogen/mocs_compilation.cpp.i:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.i
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.i
 .PHONY : canine_gui_autogen/mocs_compilation.cpp.i
 
 canine_gui_autogen/mocs_compilation.s: canine_gui_autogen/mocs_compilation.cpp.s
@@ -165,7 +165,7 @@ canine_gui_autogen/mocs_compilation.s: canine_gui_autogen/mocs_compilation.cpp.s
 
 # target to generate assembly for a file
 canine_gui_autogen/mocs_compilation.cpp.s:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.s
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/canine_gui_autogen/mocs_compilation.cpp.s
 .PHONY : canine_gui_autogen/mocs_compilation.cpp.s
 
 include/canine_gui/mainwindow.o: include/canine_gui/mainwindow.cpp.o
@@ -173,7 +173,7 @@ include/canine_gui/mainwindow.o: include/canine_gui/mainwindow.cpp.o
 
 # target to build an object file
 include/canine_gui/mainwindow.cpp.o:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.o
 .PHONY : include/canine_gui/mainwindow.cpp.o
 
 include/canine_gui/mainwindow.i: include/canine_gui/mainwindow.cpp.i
@@ -181,7 +181,7 @@ include/canine_gui/mainwindow.i: include/canine_gui/mainwindow.cpp.i
 
 # target to preprocess a source file
 include/canine_gui/mainwindow.cpp.i:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.i
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.i
 .PHONY : include/canine_gui/mainwindow.cpp.i
 
 include/canine_gui/mainwindow.s: include/canine_gui/mainwindow.cpp.s
@@ -189,7 +189,7 @@ include/canine_gui/mainwindow.s: include/canine_gui/mainwindow.cpp.s
 
 # target to generate assembly for a file
 include/canine_gui/mainwindow.cpp.s:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.s
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/mainwindow.cpp.s
 .PHONY : include/canine_gui/mainwindow.cpp.s
 
 include/canine_gui/qcustomplot.o: include/canine_gui/qcustomplot.cpp.o
@@ -197,7 +197,7 @@ include/canine_gui/qcustomplot.o: include/canine_gui/qcustomplot.cpp.o
 
 # target to build an object file
 include/canine_gui/qcustomplot.cpp.o:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.o
 .PHONY : include/canine_gui/qcustomplot.cpp.o
 
 include/canine_gui/qcustomplot.i: include/canine_gui/qcustomplot.cpp.i
@@ -205,7 +205,7 @@ include/canine_gui/qcustomplot.i: include/canine_gui/qcustomplot.cpp.i
 
 # target to preprocess a source file
 include/canine_gui/qcustomplot.cpp.i:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.i
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.i
 .PHONY : include/canine_gui/qcustomplot.cpp.i
 
 include/canine_gui/qcustomplot.s: include/canine_gui/qcustomplot.cpp.s
@@ -213,7 +213,7 @@ include/canine_gui/qcustomplot.s: include/canine_gui/qcustomplot.cpp.s
 
 # target to generate assembly for a file
 include/canine_gui/qcustomplot.cpp.s:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.s
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(MAKE) $(MAKESILENT) -f canine_gui/CMakeFiles/canine_gui.dir/build.make canine_gui/CMakeFiles/canine_gui.dir/include/canine_gui/qcustomplot.cpp.s
 .PHONY : include/canine_gui/qcustomplot.cpp.s
 
 # Help Target
@@ -246,6 +246,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/sangjun/QtTCPClient/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/sangjun/QT_TCP/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

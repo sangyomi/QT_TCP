@@ -1,7 +1,7 @@
 CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
- /home/sangjun/QtTCPClient/canine_gui/include/canine_gui/mainwindow.cpp \
+ /home/sangjun/QT_TCP/canine_gui/include/canine_gui/mainwindow.cpp \
  /usr/include/stdc-predef.h \
- /home/sangjun/QtTCPClient/canine_gui/include/canine_gui/mainwindow.h \
+ /home/sangjun/QT_TCP/canine_gui/include/canine_gui/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -287,9 +287,60 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
- /home/sangjun/QtTCPClient/include/../include/SharedMemory.hpp \
- /home/sangjun/QtTCPClient/include/../include/RobotDescription.hpp \
- /home/sangjun/QtTCPClient/include/../include/EigenTypes.hpp \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebEngineWidgets/QWebEngineView \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebEngineWidgets/qwebengineview.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkaccessmanager.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetworkglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetwork-config.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkrequest.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QSslConfiguration \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslconfiguration.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslsocket.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtcpsocket.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qabstractsocket.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslerror.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslcertificate.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcryptographichash.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qssl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QSslPreSharedKeyAuthenticator \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslpresharedkeyauthenticator.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebEngineWidgets/qtwebenginewidgetsglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebEngineWidgets/qwebenginepage.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebEngineWidgets/qwebengineclientcertificateselection.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebEngineWidgets/qwebenginedownloaditem.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebEngineCore/qwebenginecallback.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebEngineCore/qtwebenginecoreglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebEngineCore/qtwebenginecore-config.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebEngineCore/qwebenginehttprequest.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpagelayout.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpagesize.h \
+ /home/sangjun/QT_TCP/include/../include/SharedMemory.hpp \
+ /home/sangjun/QT_TCP/include/../include/RobotDescription.hpp \
+ /home/sangjun/QT_TCP/include/../include/EigenTypes.hpp \
  /usr/include/eigen3/Eigen/Dense /usr/include/eigen3/Eigen/Core \
  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
  /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
@@ -478,10 +529,9 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
- /home/sangjun/QtTCPClient/include/../include/RobotDescription.hpp \
- /home/sangjun/QtTCPClient/canine_gui/include/canine_gui/ui_mainwindow.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /home/sangjun/QT_TCP/include/../include/RobotDescription.hpp \
+ /home/sangjun/QT_TCP/include/../include/LocationInfo.hpp \
+ /home/sangjun/QT_TCP/canine_gui/include/canine_gui/ui_mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
@@ -497,8 +547,6 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h \
@@ -515,9 +563,7 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
- /home/sangjun/QtTCPClient/canine_gui/include/canine_gui/qcustomplot.hpp \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+ /home/sangjun/QT_TCP/canine_gui/include/canine_gui/qcustomplot.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointer \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpointer.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedPointer \
@@ -529,7 +575,6 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPaintEvent \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
@@ -538,20 +583,12 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QWheelEvent \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QMultiMap \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QStack \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstack.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QCache \
@@ -589,9 +626,7 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraymatcher.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborarray.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborvalue.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborcommon.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/quuid.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborcommon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcbormap.h \
@@ -670,9 +705,7 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qloggingcategory.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmessageauthenticationcode.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcryptographichash.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetaobject.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmimedata.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmimedatabase.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmimetype.h \
@@ -719,7 +752,6 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsequentialanimationgroup.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsettings.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedmemory.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsignalmapper.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsignaltransition.h \
@@ -767,7 +799,6 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/quuid.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariantanimation.h \
@@ -854,7 +885,6 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qopenglfunctions.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qopenglpaintdevice.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qopenglpixeltransferoptions.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qopenglshaderprogram.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix4x4.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qopengltexture.h \
@@ -876,10 +906,7 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpagedpaintdevice.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpagelayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpagesize.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpagelayout.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpagesize.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintengine.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpdfwriter.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpagedpaintdevice.h \
@@ -1035,7 +1062,6 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QScrollerProperties \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollerproperties.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qshortcut.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizegrip.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
@@ -1088,4 +1114,5 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtPrintSupport/qprintpreviewwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtPrintSupport/qtprintsupportversion.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QElapsedTimer \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimeZone
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimeZone \
+ /usr/include/c++/9/iostream

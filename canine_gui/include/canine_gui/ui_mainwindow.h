@@ -21,6 +21,7 @@
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QWidget>
+#include <QWebEngineView>
 #include "qcustomplot.hpp"
 
 QT_BEGIN_NAMESPACE
@@ -104,6 +105,19 @@ public:
     QCustomPlot *PLOT_CUSTOM_6;
     QMenuBar *menubar;
     QStatusBar *statusbar;
+
+    QGroupBox *groupBox_gps;
+    QWebEngineView *GOOGLE_MAP;
+    QLabel *arrow;
+    QPixmap ArrowImage;
+    QLabel *SavedMap;
+    QPixmap MapImage;
+
+    QGroupBox *groupBox_Info;
+    QLabel *DistanceInfo;
+    QLabel *latPosCoordinate;
+    QLabel *lonPosCoordinate;
+
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -386,6 +400,40 @@ public:
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
 
+        groupBox_gps = new QGroupBox(centralwidget);
+        groupBox_gps->setObjectName(QString::fromUtf8("groupBox_gps"));
+        groupBox_gps->setGeometry(QRect(1310, 0, 430, 860));
+        GOOGLE_MAP = new QWebEngineView(groupBox_gps);
+        GOOGLE_MAP->setObjectName(QString::fromUtf8("GOOGLE_MAP"));
+        GOOGLE_MAP->setGeometry(QRect(17, 35, 200, 200));
+        GOOGLE_MAP->setFont(font1);
+        arrow = new QLabel(groupBox_gps);
+        arrow->setObjectName(QString::fromUtf8("arrow"));
+        arrow->setGeometry(QRect(210, 260, 18, 18));
+        arrow->setFont(font1);
+        ArrowImage.load("/home/sangjun/QT_TCP/canine_gui/include/canine_gui/arrow.png");
+        arrow->setPixmap(ArrowImage);
+        SavedMap = new QLabel(groupBox_gps);
+        SavedMap->setObjectName(QString::fromUtf8("arrow"));
+        SavedMap->setGeometry(QRect(17, 445, 400, 400));
+        SavedMap->setFont(font1);
+
+        groupBox_Info = new QGroupBox(centralwidget);
+        groupBox_Info->setObjectName(QString::fromUtf8("groupBox_Info"));
+        groupBox_Info->setGeometry(QRect(10, 770, 1290, 90));
+        DistanceInfo = new QLabel(groupBox_Info);
+        DistanceInfo->setObjectName(QString::fromUtf8("DistanceInfo"));
+        DistanceInfo->setGeometry(QRect(10, 20, 500, 70));
+        DistanceInfo->setFont(font1);
+        latPosCoordinate = new QLabel(groupBox_Info);
+        latPosCoordinate->setObjectName(QString::fromUtf8("xPosCoordinate"));
+        latPosCoordinate->setGeometry(QRect(400, 20, 500, 70));
+        latPosCoordinate->setFont(font1);
+        lonPosCoordinate = new QLabel(groupBox_Info);
+        lonPosCoordinate->setObjectName(QString::fromUtf8("yPosCoordinate"));
+        lonPosCoordinate->setGeometry(QRect(825, 20, 500, 70));
+        lonPosCoordinate->setFont(font1);
+
         retranslateUi(MainWindow);
 
         tabWidget->setCurrentIndex(0);
@@ -424,6 +472,9 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(TAB_FORWARD), QApplication::translate("MainWindow", "Forward", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(TAB_BACKWARD), QApplication::translate("MainWindow", "Backward", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(TAB_CUSTOM), QApplication::translate("MainWindow", "Custom", nullptr));
+
+        groupBox_gps->setTitle(QApplication::translate("MainWindow", "Navigation", nullptr));
+        groupBox_Info->setTitle(QApplication::translate("MainWindow", "INFO", nullptr));
     } // retranslateUi
 
 };

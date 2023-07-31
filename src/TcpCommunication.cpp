@@ -8,12 +8,18 @@ extern pBUTTON joystickButton;
 extern pUI_COMMAND sharedCommand;
 extern pSHM sharedMemory;
 extern pCUSTOM_DATA sharedCustom;
+extern pGPS_DATA locationInfo;
 
 pthread_t JoystickReader;
 pthread_t QtServer;
 pthread_t QtClient;
+pthread_t MapUpdate;
 
 JoystickOnex Onex;
+MapGenerator Map;
+
+constexpr double pi = 3.14159265358979323846;
+constexpr double earthRadiusInMeters = 6371000.0;
 
 void transJoystick()
 {
@@ -344,6 +350,78 @@ void* ReadJoystick(void* arg)
         transJoystick();
     }
 }
+
+double degToRad(double deg) {
+    return deg * pi / 180.0;
+}
+
+double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
+    double lat1Rad = degToRad(lat1);
+    double lon1Rad = degToRad(lon1);
+    double lat2Rad = degToRad(lat2);
+    double lon2Rad = degToRad(lon2);
+
+    double dLat = lat2Rad - lat1Rad;
+    double dLon = lon2Rad - lon1Rad;
+
+    double a = std::sin(dLat / 2) * std::sin(dLat / 2) +
+               std::cos(lat1Rad) * std::cos(lat2Rad) *
+               std::sin(dLon / 2) * std::sin(dLon / 2);
+
+    double c = 2 * std::atan2(std::sqrt(a), std::sqrt(1 - a));
+    double distance = earthRadiusInMeters * c;
+
+    return distance;
+}
+
+void* mapGenerator(void* arg)
+{
+    //
+    locationInfo->latitudeCoordinate = 35.231944;
+    locationInfo->longitudeCoordinate = 129.083333;
+    //
+    locationInfo->distance = 0;
+    while(true)
+    {
+        locationInfo->latitudeCoordinateInfo[locationInfo->count] = locationInfo->latitudeCoordinate;
+        locationInfo->longitudeCoordinateInfo[locationInfo->count] = locationInfo->longitudeCoordinate;
+        //
+        if(locationInfo->count < 30)
+        {
+            locationInfo->latitudeCoordinate += 0.00002;
+            locationInfo->longitudeCoordinate += 0.00005;
+        }
+        else if(locationInfo->count < 60)
+        {
+            locationInfo->latitudeCoordinate += 0.00004;
+            locationInfo->longitudeCoordinate += -0.00003;
+        }
+        else
+        {
+            locationInfo->latitudeCoordinate += 0.00006;
+            locationInfo->longitudeCoordinate += -0.00002;
+        }
+        //
+        std::cout.precision(9);
+        if (locationInfo->count > 0)
+        {
+            locationInfo->distance += calculateDistance(locationInfo->latitudeCoordinateInfo[locationInfo->count],locationInfo->longitudeCoordinateInfo[locationInfo->count],
+                                                        locationInfo->latitudeCoordinateInfo[locationInfo->count - 1],locationInfo->longitudeCoordinateInfo[locationInfo->count - 1]);
+        }
+        Map.generateHTMLFile(locationInfo->latitudeCoordinate,locationInfo->longitudeCoordinate, 18, "map.html");
+        usleep(1000000);
+        locationInfo->count++;
+    }
+}
+
+void SavedMapGenerator()
+{
+    locationInfo->latitudeCoordinate = 35.231944;
+    locationInfo->longitudeCoordinate = 129.083333;
+    Map.generateHTMLFile(locationInfo->latitudeCoordinate,locationInfo->longitudeCoordinate, 16, "savedmap.html");
+}
+
+
 void StartCommunication()
 {
     joystickAxis = (pAXIS)malloc(sizeof(AXIS));
@@ -351,9 +429,13 @@ void StartCommunication()
     sharedCommand = (pUI_COMMAND)malloc(sizeof(UI_COMMAND));
     sharedMemory = (pSHM)malloc(sizeof(SHM));
     sharedCustom = (pCUSTOM_DATA)malloc(sizeof(CUSTOM_DATA));
+    locationInfo = (pGPS_DATA)malloc(sizeof(pGPS_DATA));
+
+    SavedMapGenerator();
 
     int thread_id_nrt = generate_nrt_thread(JoystickReader, ReadJoystick, "joystick_thread", 4, NULL);
     sleep(1);
     int thread_id_rt1 = generate_rt_thread(QtClient, sendData, "client_thread", 5, 0, NULL);
     int thread_id_rt2 = generate_rt_thread(QtServer, receiveData, "server_thread", 6, 0, NULL);
+    int thread_id_gps = generate_rt_thread(MapUpdate, mapGenerator, "server_thread", 7, 0, NULL);
 }

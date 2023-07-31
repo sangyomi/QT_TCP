@@ -1,8 +1,7 @@
 CMakeFiles/QtTCPClient.dir/src/JoystickOnex.cpp.o: \
- /home/sangjun/QtTCPClient/src/JoystickOnex.cpp \
- /usr/include/stdc-predef.h \
- /home/sangjun/QtTCPClient/src/../include/JoystickOnex.h \
- /home/sangjun/QtTCPClient/src/../include/JoystickOnex.h \
+ /home/sangjun/QT_TCP/src/JoystickOnex.cpp /usr/include/stdc-predef.h \
+ /home/sangjun/QT_TCP/src/../include/JoystickOnex.h \
+ /home/sangjun/QT_TCP/src/../include/JoystickOnex.h \
  /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \

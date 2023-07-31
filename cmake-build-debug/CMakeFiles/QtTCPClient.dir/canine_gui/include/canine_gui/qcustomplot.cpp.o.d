@@ -1,7 +1,7 @@
 CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/qcustomplot.cpp.o: \
- /home/sangjun/QtTCPClient/canine_gui/include/canine_gui/qcustomplot.cpp \
+ /home/sangjun/QT_TCP/canine_gui/include/canine_gui/qcustomplot.cpp \
  /usr/include/stdc-predef.h \
- /home/sangjun/QtTCPClient/canine_gui/include/canine_gui/qcustomplot.hpp \
+ /home/sangjun/QT_TCP/canine_gui/include/canine_gui/qcustomplot.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
  /usr/include/c++/9/type_traits \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \

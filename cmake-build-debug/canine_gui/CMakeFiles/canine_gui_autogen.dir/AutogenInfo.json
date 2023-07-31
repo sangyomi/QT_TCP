@@ -1,40 +1,60 @@
 {
-	"BUILD_DIR" : "/home/sangjun/QtTCPClient/cmake-build-debug/canine_gui/canine_gui_autogen",
-	"CMAKE_BINARY_DIR" : "/home/sangjun/QtTCPClient/cmake-build-debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/sangjun/QtTCPClient/cmake-build-debug/canine_gui",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/sangjun/QtTCPClient/canine_gui",
-	"CMAKE_EXECUTABLE" : "/snap/clion/235/bin/cmake/linux/x64/bin/cmake",
+	"BUILD_DIR" : "/home/sangjun/QT_TCP/cmake-build-debug/canine_gui/canine_gui_autogen",
+	"CMAKE_BINARY_DIR" : "/home/sangjun/QT_TCP/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/sangjun/QT_TCP/cmake-build-debug/canine_gui",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/sangjun/QT_TCP/canine_gui",
+	"CMAKE_EXECUTABLE" : "/snap/clion/246/bin/cmake/linux/x64/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/sangjun/QtTCPClient/canine_gui/CMakeLists.txt",
+		"/home/sangjun/QT_TCP/canine_gui/CMakeLists.txt",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
-		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake"
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5WebEngineWidgets/Qt5WebEngineWidgetsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5WebEngineWidgets/Qt5WebEngineWidgetsConfig.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/sangjun/QtTCPClient",
+	"CMAKE_SOURCE_DIR" : "/home/sangjun/QT_TCP",
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
 	[
 		[
-			"/home/sangjun/QtTCPClient/canine_gui/include/canine_gui/mainwindow.h",
+			"/home/sangjun/QT_TCP/canine_gui/include/canine_gui/mainwindow.h",
 			"Mu",
 			"4CINPIWSIB/moc_mainwindow.cpp",
 			null
 		],
 		[
-			"/home/sangjun/QtTCPClient/canine_gui/include/canine_gui/qcustomplot.hpp",
+			"/home/sangjun/QT_TCP/canine_gui/include/canine_gui/qcustomplot.hpp",
 			"Mu",
 			"4CINPIWSIB/moc_qcustomplot.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/sangjun/QtTCPClient/cmake-build-debug/canine_gui/canine_gui_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/sangjun/QtTCPClient/cmake-build-debug/canine_gui/canine_gui_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"INCLUDE_DIR" : "/home/sangjun/QT_TCP/cmake-build-debug/canine_gui/canine_gui_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/sangjun/QT_TCP/cmake-build-debug/canine_gui/canine_gui_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_POSITIONING_LIB",
+		"QT_PRINTSUPPORT_LIB",
+		"QT_QML_LIB",
+		"QT_QUICK_LIB",
+		"QT_WEBCHANNEL_LIB",
+		"QT_WEBENGINECORE_LIB",
+		"QT_WEBENGINEWIDGETS_LIB",
+		"QT_WIDGETS_LIB"
+	],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -44,14 +64,22 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/sangjun/QtTCPClient/include",
-		"/home/sangjun/QtTCPClient/canine_gui/include",
+		"/home/sangjun/QT_TCP/include",
+		"/home/sangjun/QT_TCP/canine_gui/include",
 		"/include",
 		"/usr/include/x86_64-linux-gnu/qt5",
 		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
 		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
 		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWebEngineWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWebEngineCore",
+		"/usr/include/x86_64-linux-gnu/qt5/QtQuick",
+		"/usr/include/x86_64-linux-gnu/qt5/QtQml",
+		"/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWebChannel",
+		"/usr/include/x86_64-linux-gnu/qt5/QtPositioning",
+		"/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport",
 		"/usr/include/c++/9",
 		"/usr/include/x86_64-linux-gnu/c++/9",
 		"/usr/include/c++/9/backward",
@@ -69,28 +97,28 @@
 		"-dM",
 		"-E",
 		"-c",
-		"/snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp"
+		"/snap/clion/246/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/sangjun/QtTCPClient/cmake-build-debug/canine_gui/canine_gui_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/sangjun/QT_TCP/cmake-build-debug/canine_gui/canine_gui_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 4,
-	"PARSE_CACHE_FILE" : "/home/sangjun/QtTCPClient/cmake-build-debug/canine_gui/CMakeFiles/canine_gui_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/sangjun/QT_TCP/cmake-build-debug/canine_gui/CMakeFiles/canine_gui_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 12,
-	"SETTINGS_FILE" : "/home/sangjun/QtTCPClient/cmake-build-debug/canine_gui/CMakeFiles/canine_gui_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/sangjun/QT_TCP/cmake-build-debug/canine_gui/CMakeFiles/canine_gui_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/sangjun/QtTCPClient/canine_gui/include/canine_gui/mainwindow.cpp",
+			"/home/sangjun/QT_TCP/canine_gui/include/canine_gui/mainwindow.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/sangjun/QtTCPClient/canine_gui/include/canine_gui/qcustomplot.cpp",
+			"/home/sangjun/QT_TCP/canine_gui/include/canine_gui/qcustomplot.cpp",
 			"Mu",
 			null
 		]

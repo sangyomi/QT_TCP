@@ -1,9 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <iostream>
 
 extern pUI_COMMAND sharedCommand;
 extern pSHM sharedMemory;
 extern pCUSTOM_DATA sharedCustom;
+extern pGPS_DATA locationInfo;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -13,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent)
     InitLineEdit();
     InitTable(ui->TW_MOTOR);
     GraphInitialize();
+    SavedMapInitialize();
+    QTimer::singleShot(2000, this, &MainWindow::SavedMapGenerator);
+    GpsInitialize();
 
     displayTimer = new QTimer();
     connect(displayTimer, SIGNAL(timeout()), this, SLOT(DisplayUpdate()));
@@ -24,6 +29,16 @@ MainWindow::MainWindow(QWidget *parent)
 
     graphOffset = 2.5;
     mIsUpdateGraph = true;
+
+    angle = 0;
+
+    gpsTimer = new QTimer();
+    connect(gpsTimer, SIGNAL(timeout()), this, SLOT(GpsUpdate()));
+    gpsTimer->start(1000);
+
+    savedMapTimer = new QTimer();
+    connect(savedMapTimer, SIGNAL(timeout()), this, SLOT(SavedMapUpdate()));
+    savedMapTimer->start(1000);
 }
 
 MainWindow::~MainWindow()
@@ -765,6 +780,81 @@ void MainWindow::DisplayUpdate()
         ui->TW_MOTOR->item(index, 5)->setText(QString().sprintf("%.1f", sharedMemory->motorDesiredTorque[index]));
         ui->TW_MOTOR->item(index, 6)->setText(QString().sprintf("%.1f", sharedMemory->motorTorque[index]));
     }
+}
+
+void MainWindow::SavedMapInitialize()
+{
+    view.setFixedSize(400, 400);
+    view.load(QUrl("file:/home/sangjun/QT_TCP/cmake-build-debug/savedmap.html"));
+    view.show();
+}
+
+void MainWindow::SavedMapGenerator()
+{
+    QString savePath = "/home/sangjun/QT_TCP/cmake-build-debug/";
+    QString fileName = "savedmap.png";
+
+    QPixmap screenshot = view.grab();
+
+    if (screenshot.save(savePath + fileName)) {
+        qDebug() << "Image saved successfully: " << savePath + fileName;
+    } else {
+        qDebug() << "Failed to save the image.";
+    }
+}
+
+void MainWindow::SavedMapUpdate()
+{
+    QPixmap UpdatedMapImage("/home/sangjun/QT_TCP/cmake-build-debug/savedmap.png");
+    QPainter painter(&UpdatedMapImage);
+    painter.setPen(Qt::red);
+    QPen pen = painter.pen();
+    pen.setWidth(3);
+    painter.setPen(pen);
+    //
+    int xpos = 50000.0*(locationInfo->longitudeCoordinateInfo[locationInfo->count] - 129.083333) + 200.0;
+    int ypos = -50000.0*(locationInfo->latitudeCoordinateInfo[locationInfo->count] - 35.231944) + 250.0;
+    //
+    QPoint point(xpos, ypos);
+    painter.drawPoint(point);
+    painter.end();
+    ui->SavedMap->setPixmap(UpdatedMapImage);
+    QString savePath = "/home/sangjun/QT_TCP/cmake-build-debug/";
+    QString fileName = "savedmap.png";
+    UpdatedMapImage.save(savePath + fileName);
+}
+
+void MainWindow::GpsInitialize()
+{
+    ui->GOOGLE_MAP->setFixedSize(400, 400);
+    ui->GOOGLE_MAP->load(QUrl("file:/home/sangjun/QT_TCP/cmake-build-debug/map.html"));
+    ui->GOOGLE_MAP->show();
+}
+
+void MainWindow::GpsUpdate()
+{
+    angle += 10;
+    ui->GOOGLE_MAP->reload();
+    QPixmap rotatedImage = ui->ArrowImage.transformed(QMatrix().rotate(angle));
+    ui->arrow->setPixmap(rotatedImage);
+
+    QString text1 = "      Distance:" + QString::number(locationInfo->distance, 'f', 5);
+    QFont font1 = ui->DistanceInfo->font();
+    font1.setPointSize(25);
+    ui->DistanceInfo->setText(text1);
+    ui->DistanceInfo->setFont(font1);
+
+    QString text2 = "|         Latitude:" + QString::number(locationInfo->latitudeCoordinate, 'f', 5);
+    QFont font2 = ui->latPosCoordinate->font();
+    font2.setPointSize(25);
+    ui->latPosCoordinate->setText(text2);
+    ui->latPosCoordinate->setFont(font2);
+
+    QString text3 = "|         Longitude:" + QString::number(locationInfo->longitudeCoordinate, 'f', 5);
+    QFont font3 = ui->lonPosCoordinate->font();
+    font3.setPointSize(25);
+    ui->lonPosCoordinate->setText(text3);
+    ui->lonPosCoordinate->setFont(font3);
 }
 
 void MainWindow::on_BT_CAN_ON_clicked()

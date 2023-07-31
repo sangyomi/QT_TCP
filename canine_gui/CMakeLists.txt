@@ -3,6 +3,7 @@ project(canine_gui LANGUAGES CXX)
 
 set(CMAKE_AUTOMOC ON)
 find_package(Qt5 CONFIG REQUIRED COMPONENTS Widgets)
+find_package(Qt5 COMPONENTS Widgets WebEngineWidgets REQUIRED)
 
 include_directories(
         include
@@ -18,6 +19,7 @@ add_library(canine_visualizer::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
 target_link_libraries(${PROJECT_NAME}
         Qt5::Widgets
+        Qt5::WebEngineWidgets
         canine_util
 )
 
