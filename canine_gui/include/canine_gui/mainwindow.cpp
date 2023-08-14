@@ -6,6 +6,7 @@ extern pUI_COMMAND sharedCommand;
 extern pSHM sharedMemory;
 extern pCUSTOM_DATA sharedCustom;
 extern pGPS_DATA locationInfo;
+extern pLIDAR lidarInfo;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -39,6 +40,10 @@ MainWindow::MainWindow(QWidget *parent)
     savedMapTimer = new QTimer();
     connect(savedMapTimer, SIGNAL(timeout()), this, SLOT(SavedMapUpdate()));
     savedMapTimer->start(1000);
+
+    lidarTimer = new QTimer();
+    connect(lidarTimer, SIGNAL(timeout()), this, SLOT(LidarUpdate()));
+    lidarTimer->start(100);
 }
 
 MainWindow::~MainWindow()
@@ -838,7 +843,7 @@ void MainWindow::GpsUpdate()
     QPixmap rotatedImage = ui->ArrowImage.transformed(QMatrix().rotate(angle));
     ui->arrow->setPixmap(rotatedImage);
 
-    QString text1 = "      Distance:" + QString::number(locationInfo->distance, 'f', 5);
+    QString text1 = "      Distance:" + QString::number(locationInfo->distance, 'f', 5)  + "m";
     QFont font1 = ui->DistanceInfo->font();
     font1.setPointSize(25);
     ui->DistanceInfo->setText(text1);
@@ -855,6 +860,48 @@ void MainWindow::GpsUpdate()
     font3.setPointSize(25);
     ui->lonPosCoordinate->setText(text3);
     ui->lonPosCoordinate->setFont(font3);
+}
+
+void MainWindow::LidarUpdate()
+{
+    int imageSize = 1000; // 이미지 크기 설정
+    QImage image(imageSize, imageSize, QImage::Format_ARGB32);
+    image.fill(Qt::transparent);
+    QPainter painter(&image);
+
+    for (int i = 0; i < lidarInfo->scanSize; ++i) {
+        double angle = 360.0 * static_cast<double>(i) / lidarInfo->scanSize;
+        int coefficient = 50;
+        int x = imageSize / 2 + static_cast<int>(coefficient*lidarInfo->scanRanges[i] * qSin(qDegreesToRadians(angle)));
+        int y = imageSize / 2 - static_cast<int>(coefficient*lidarInfo->scanRanges[i] * qCos(qDegreesToRadians(angle)));
+
+        QPen pen(Qt::yellow);
+        pen.setWidth(2);
+        painter.setPen(pen);
+        painter.drawPoint(x, y);
+    }
+
+    QPen pen(Qt::red);
+    pen.setWidth(4);
+    painter.setPen(pen);
+    painter.drawPoint(imageSize / 2, imageSize / 2);
+
+    painter.end();
+
+    image.save("lidar_map.png");
+
+    QPixmap background("/home/sangjun/QT_TCP/cmake-build-debug/lidar_background2.png");
+    QPixmap scanImage("/home/sangjun/QT_TCP/cmake-build-debug/lidar_map.png");
+
+    int xOffset = (background.width() - image.width()) / 2;
+    int yOffset = (background.height() - image.height()) / 2;
+
+    QPainter overlayPainter(&background);
+    overlayPainter.drawImage(xOffset, yOffset, image);
+
+    QPixmap scaledImage = background.scaled(ui->ScanData->size(), Qt::KeepAspectRatio);
+    ui->ScanData->setPixmap(scaledImage);
+    ui->ScanData->setAlignment(Qt::AlignBottom | Qt::AlignRight);
 }
 
 void MainWindow::on_BT_CAN_ON_clicked()

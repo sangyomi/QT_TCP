@@ -531,6 +531,7 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
  /home/sangjun/QT_TCP/include/../include/RobotDescription.hpp \
  /home/sangjun/QT_TCP/include/../include/LocationInfo.hpp \
+ /home/sangjun/QT_TCP/include/../include/LidarInfo.hpp \
  /home/sangjun/QT_TCP/canine_gui/include/canine_gui/ui_mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \

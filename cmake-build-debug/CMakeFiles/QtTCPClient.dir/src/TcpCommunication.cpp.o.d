@@ -731,4 +731,5 @@ CMakeFiles/QtTCPClient.dir/src/TcpCommunication.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
  /home/sangjun/QT_TCP/src/../include/JoystickInfo.hpp \
  /home/sangjun/QT_TCP/src/../include/ThreadGenerator.hpp \
- /home/sangjun/QT_TCP/src/../include/LocationInfo.hpp
+ /home/sangjun/QT_TCP/src/../include/LocationInfo.hpp \
+ /home/sangjun/QT_TCP/src/../include/LidarInfo.hpp

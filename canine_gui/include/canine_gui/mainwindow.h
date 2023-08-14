@@ -9,6 +9,7 @@
 #include "../include/SharedMemory.hpp"
 #include "../include/RobotDescription.hpp"
 #include "../include/LocationInfo.hpp"
+#include "../include/LidarInfo.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -31,6 +32,7 @@ private slots:
     void SavedMapInitialize();
     void SavedMapGenerator();
     void SavedMapUpdate();
+    void LidarUpdate();
     void on_BT_CAN_ON_clicked();
     void on_BT_VISUAL_ON_clicked();
     void on_BT_MOTOR_ON_clicked();
@@ -52,11 +54,13 @@ private:
     QTimer		*graphTimer;
     QTimer      *gpsTimer;
     QTimer      *savedMapTimer;
+    QTimer      *lidarTimer;
     double graphOffset;
     bool mIsUpdateGraph;
     void InitTable(QTableWidget *table);
     void InitLineEdit();
     double angle;
     QWebEngineView view;
+    double lidarTable[1000][1000];
 };
 #endif // MAINWINDOW_H

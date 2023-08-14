@@ -532,6 +532,7 @@ CMakeFiles/QtTCPClient.dir/QtTCPClient_autogen/mocs_compilation.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
  /home/sangjun/QT_TCP/include/../include/RobotDescription.hpp \
  /home/sangjun/QT_TCP/include/../include/LocationInfo.hpp \
+ /home/sangjun/QT_TCP/include/../include/LidarInfo.hpp \
  /home/sangjun/QT_TCP/cmake-build-debug/QtTCPClient_autogen/ACFNVX7YGT/moc_qcustomplot.cpp \
  /home/sangjun/QT_TCP/cmake-build-debug/QtTCPClient_autogen/ACFNVX7YGT/../../../canine_gui/include/canine_gui/qcustomplot.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointer \

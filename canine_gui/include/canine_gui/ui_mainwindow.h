@@ -106,12 +106,15 @@ public:
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
-    QGroupBox *groupBox_gps;
+    QTabWidget *sensorWidget;
+    QWidget *TAB_GPS;
     QWebEngineView *GOOGLE_MAP;
     QLabel *arrow;
     QPixmap ArrowImage;
     QLabel *SavedMap;
     QPixmap MapImage;
+    QWidget *TAB_LIDAR;
+    QLabel *ScanData;
 
     QGroupBox *groupBox_Info;
     QLabel *DistanceInfo;
@@ -400,23 +403,35 @@ public:
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
 
-        groupBox_gps = new QGroupBox(centralwidget);
-        groupBox_gps->setObjectName(QString::fromUtf8("groupBox_gps"));
-        groupBox_gps->setGeometry(QRect(1310, 0, 430, 860));
-        GOOGLE_MAP = new QWebEngineView(groupBox_gps);
+        sensorWidget = new QTabWidget(centralwidget);
+        sensorWidget->setObjectName(QString::fromUtf8("sensorWidget"));
+        sensorWidget->setGeometry(QRect(1310, 10, 430, 860));
+        TAB_GPS = new QWidget();
+        TAB_GPS->setObjectName(QString::fromUtf8("TAB_GPS"));
+        GOOGLE_MAP = new QWebEngineView(TAB_GPS);
         GOOGLE_MAP->setObjectName(QString::fromUtf8("GOOGLE_MAP"));
-        GOOGLE_MAP->setGeometry(QRect(17, 35, 200, 200));
+        GOOGLE_MAP->setGeometry(QRect(17, 5, 200, 200));
         GOOGLE_MAP->setFont(font1);
-        arrow = new QLabel(groupBox_gps);
+        arrow = new QLabel(TAB_GPS);
         arrow->setObjectName(QString::fromUtf8("arrow"));
-        arrow->setGeometry(QRect(210, 260, 18, 18));
+        arrow->setGeometry(QRect(210, 230, 18, 18));
         arrow->setFont(font1);
         ArrowImage.load("/home/sangjun/QT_TCP/canine_gui/include/canine_gui/arrow.png");
         arrow->setPixmap(ArrowImage);
-        SavedMap = new QLabel(groupBox_gps);
+        SavedMap = new QLabel(TAB_GPS);
         SavedMap->setObjectName(QString::fromUtf8("arrow"));
-        SavedMap->setGeometry(QRect(17, 445, 400, 400));
+        SavedMap->setGeometry(QRect(17, 415, 400, 400));
         SavedMap->setFont(font1);
+        sensorWidget->addTab(TAB_GPS, QString());
+
+        TAB_LIDAR = new QWidget();
+        TAB_LIDAR->setObjectName(QString::fromUtf8("TAB_LIDAR"));
+        ScanData = new QLabel(TAB_LIDAR);
+        ScanData->setObjectName(QString::fromUtf8("ScanInfo"));
+        ScanData->setGeometry(QRect(13, 13, 400, 400));
+        ScanData->setFont(font1);
+        sensorWidget->addTab(TAB_LIDAR, QString());
+
 
         groupBox_Info = new QGroupBox(centralwidget);
         groupBox_Info->setObjectName(QString::fromUtf8("groupBox_Info"));
@@ -473,7 +488,8 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(TAB_BACKWARD), QApplication::translate("MainWindow", "Backward", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(TAB_CUSTOM), QApplication::translate("MainWindow", "Custom", nullptr));
 
-        groupBox_gps->setTitle(QApplication::translate("MainWindow", "Navigation", nullptr));
+        sensorWidget->setTabText(sensorWidget->indexOf(TAB_GPS), QApplication::translate("MainWindow", "GPS", nullptr));
+        sensorWidget->setTabText(sensorWidget->indexOf(TAB_LIDAR), QApplication::translate("MainWindow", "LIDAR", nullptr));
         groupBox_Info->setTitle(QApplication::translate("MainWindow", "INFO", nullptr));
     } // retranslateUi
 

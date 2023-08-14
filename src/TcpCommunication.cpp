@@ -9,6 +9,7 @@ extern pUI_COMMAND sharedCommand;
 extern pSHM sharedMemory;
 extern pCUSTOM_DATA sharedCustom;
 extern pGPS_DATA locationInfo;
+extern pLIDAR lidarInfo;
 
 pthread_t JoystickReader;
 pthread_t QtServer;
@@ -199,6 +200,10 @@ void deserializeSharedMemoryInfo (QDataStream &stream)
     // CUSTOM_DATA
     stream.readRawData(reinterpret_cast<char*>(sharedCustom->customVariableDouble), MAX_CUSTOM_DATA * sizeof(double));
     stream.readRawData(reinterpret_cast<char*>(sharedCustom->customVariableInt), MAX_CUSTOM_DATA * sizeof(int));
+
+    // LIDAR_DATA
+    stream >> lidarInfo->scanSize;
+    stream.readRawData(reinterpret_cast<char*>(lidarInfo->scanRanges), lidarInfo->scanSize * sizeof(double));
 }
 
 void printJoystickValue()
@@ -237,7 +242,7 @@ void* sendData(void* arg)
     struct timespec TIME_NOW;
 
 //    const QHostAddress serverAddress("192.168.0.137");
-    const QHostAddress serverAddress("10.42.0.1");
+    const QHostAddress serverAddress("10.125.63.93");
     const quint16 serverPort = 12345;
 
     while (true)
@@ -429,7 +434,8 @@ void StartCommunication()
     sharedCommand = (pUI_COMMAND)malloc(sizeof(UI_COMMAND));
     sharedMemory = (pSHM)malloc(sizeof(SHM));
     sharedCustom = (pCUSTOM_DATA)malloc(sizeof(CUSTOM_DATA));
-    locationInfo = (pGPS_DATA)malloc(sizeof(pGPS_DATA));
+    locationInfo = (pGPS_DATA)malloc(sizeof(GPS_DATA));
+    lidarInfo = (pLIDAR)malloc(sizeof(LIDAR));
 
     SavedMapGenerator();
 

@@ -20,6 +20,7 @@
 #include "JoystickInfo.hpp"
 #include "ThreadGenerator.hpp"
 #include "LocationInfo.hpp"
+#include "LidarInfo.hpp"
 
 void StartCommunication();
 void* sendData(void* arg);

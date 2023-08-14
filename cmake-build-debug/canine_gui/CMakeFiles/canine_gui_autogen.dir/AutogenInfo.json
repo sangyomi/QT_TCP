@@ -3,7 +3,7 @@
 	"CMAKE_BINARY_DIR" : "/home/sangjun/QT_TCP/cmake-build-debug",
 	"CMAKE_CURRENT_BINARY_DIR" : "/home/sangjun/QT_TCP/cmake-build-debug/canine_gui",
 	"CMAKE_CURRENT_SOURCE_DIR" : "/home/sangjun/QT_TCP/canine_gui",
-	"CMAKE_EXECUTABLE" : "/snap/clion/246/bin/cmake/linux/x64/bin/cmake",
+	"CMAKE_EXECUTABLE" : "/snap/clion/248/bin/cmake/linux/x64/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
 		"/home/sangjun/QT_TCP/canine_gui/CMakeLists.txt",
@@ -97,7 +97,7 @@
 		"-dM",
 		"-E",
 		"-c",
-		"/snap/clion/246/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp"
+		"/snap/clion/248/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp"
 	],
 	"MOC_PREDEFS_FILE" : "/home/sangjun/QT_TCP/cmake-build-debug/canine_gui/canine_gui_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
