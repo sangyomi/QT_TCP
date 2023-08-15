@@ -593,8 +593,24 @@ CMakeFiles/QtTCPClient.dir/QtTCPClient_autogen/mocs_compilation.cpp.o: QtTCPClie
   /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
   /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
   /home/sangjun/QT_TCP/include/RobotDescription.hpp \
-  /home/sangjun/QT_TCP/include/LocationInfo.hpp \
-  /home/sangjun/QT_TCP/include/LidarInfo.hpp \
+  /home/sangjun/QT_TCP/include/SensorInfo.hpp \
+  /home/sangjun/QT_TCP/include/MapGenerator.hpp \
+  /usr/include/c++/9/iostream \
+  /usr/include/c++/9/fstream \
+  /usr/include/c++/9/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
+  /usr/include/c++/9/bits/fstream.tcc \
+  /usr/include/c++/9/iomanip \
+  /usr/include/c++/9/locale \
+  /usr/include/c++/9/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/9/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/9/bits/locale_conv.h \
+  /usr/include/c++/9/bits/unique_ptr.h \
+  /usr/include/c++/9/bits/quoted_string.h \
   QtTCPClient_autogen/ACFNVX7YGT/moc_qcustomplot.cpp \
   /home/sangjun/QT_TCP/canine_gui/include/canine_gui/qcustomplot.hpp \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointer \
@@ -826,7 +842,6 @@ CMakeFiles/QtTCPClient.dir/QtTCPClient_autogen/mocs_compilation.cpp.o: QtTCPClie
   /usr/include/c++/9/memory \
   /usr/include/c++/9/bits/stl_raw_storage_iter.h \
   /usr/include/c++/9/ext/concurrence.h \
-  /usr/include/c++/9/bits/unique_ptr.h \
   /usr/include/c++/9/bits/shared_ptr.h \
   /usr/include/c++/9/bits/shared_ptr_base.h \
   /usr/include/c++/9/bits/shared_ptr_atomic.h \
@@ -1766,8 +1781,24 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: /home
   /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
   /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
   /home/sangjun/QT_TCP/include/RobotDescription.hpp \
-  /home/sangjun/QT_TCP/include/LocationInfo.hpp \
-  /home/sangjun/QT_TCP/include/LidarInfo.hpp \
+  /home/sangjun/QT_TCP/include/SensorInfo.hpp \
+  /home/sangjun/QT_TCP/include/MapGenerator.hpp \
+  /usr/include/c++/9/iostream \
+  /usr/include/c++/9/fstream \
+  /usr/include/c++/9/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
+  /usr/include/c++/9/bits/fstream.tcc \
+  /usr/include/c++/9/iomanip \
+  /usr/include/c++/9/locale \
+  /usr/include/c++/9/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/9/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/9/bits/locale_conv.h \
+  /usr/include/c++/9/bits/unique_ptr.h \
+  /usr/include/c++/9/bits/quoted_string.h \
   /home/sangjun/QT_TCP/canine_gui/include/canine_gui/ui_mainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
@@ -2025,7 +2056,6 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: /home
   /usr/include/c++/9/memory \
   /usr/include/c++/9/bits/stl_raw_storage_iter.h \
   /usr/include/c++/9/ext/concurrence.h \
-  /usr/include/c++/9/bits/unique_ptr.h \
   /usr/include/c++/9/bits/shared_ptr.h \
   /usr/include/c++/9/bits/shared_ptr_base.h \
   /usr/include/c++/9/bits/shared_ptr_atomic.h \
@@ -2356,8 +2386,7 @@ CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o: /home
   /usr/include/x86_64-linux-gnu/qt5/QtPrintSupport/qprintpreviewwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtPrintSupport/qtprintsupportversion.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QElapsedTimer \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimeZone \
-  /usr/include/c++/9/iostream
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimeZone
 
 CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/qcustomplot.cpp.o: /home/sangjun/QT_TCP/canine_gui/include/canine_gui/qcustomplot.cpp \
   /usr/include/stdc-predef.h \
@@ -4552,7 +4581,7 @@ CMakeFiles/QtTCPClient.dir/src/TcpCommunication.cpp.o: /home/sangjun/QT_TCP/src/
   /home/sangjun/QT_TCP/include/JoystickInfo.hpp \
   /home/sangjun/QT_TCP/include/ThreadGenerator.hpp \
   /home/sangjun/QT_TCP/include/LocationInfo.hpp \
-  /home/sangjun/QT_TCP/include/LidarInfo.hpp
+  /home/sangjun/QT_TCP/include/SensorInfo.hpp
 
 CMakeFiles/QtTCPClient.dir/src/ThreadGenerator.cpp.o: /home/sangjun/QT_TCP/src/ThreadGenerator.cpp \
   /usr/include/stdc-predef.h \
@@ -5424,7 +5453,7 @@ CMakeFiles/QtTCPClient.dir/src/main.cpp.o: /home/sangjun/QT_TCP/src/main.cpp \
   /home/sangjun/QT_TCP/include/JoystickInfo.hpp \
   /home/sangjun/QT_TCP/include/ThreadGenerator.hpp \
   /home/sangjun/QT_TCP/include/LocationInfo.hpp \
-  /home/sangjun/QT_TCP/include/LidarInfo.hpp \
+  /home/sangjun/QT_TCP/include/SensorInfo.hpp \
   /home/sangjun/QT_TCP/canine_gui/include/canine_gui/mainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
@@ -5507,23 +5536,19 @@ CMakeFiles/QtTCPClient.dir/src/main.cpp.o: /home/sangjun/QT_TCP/src/main.cpp \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpagesize.h \
   /home/sangjun/QT_TCP/include/SharedMemory.hpp \
   /home/sangjun/QT_TCP/include/RobotDescription.hpp \
-  /home/sangjun/QT_TCP/include/LocationInfo.hpp \
-  /home/sangjun/QT_TCP/include/LidarInfo.hpp
+  /home/sangjun/QT_TCP/include/SensorInfo.hpp \
+  /home/sangjun/QT_TCP/include/MapGenerator.hpp
 
 
 /home/sangjun/QT_TCP/src/main.cpp:
 
 /home/sangjun/QT_TCP/src/ThreadGenerator.cpp:
 
+/home/sangjun/QT_TCP/include/LocationInfo.hpp:
+
 /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtcpserver.h:
 
 /home/sangjun/QT_TCP/src/TcpCommunication.cpp:
-
-/usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h:
-
-/usr/include/c++/9/fstream:
-
-/home/sangjun/QT_TCP/include/MapGenerator.hpp:
 
 /usr/include/asm-generic/posix_types.h:
 
@@ -5562,22 +5587,6 @@ CMakeFiles/QtTCPClient.dir/src/main.cpp.o: /home/sangjun/QT_TCP/src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/fcntl.h:
 
 /usr/include/fcntl.h:
-
-/usr/include/c++/9/bits/quoted_string.h:
-
-/usr/include/c++/9/bits/locale_conv.h:
-
-/usr/include/libintl.h:
-
-/usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h:
-
-/usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QThread:
-
-/usr/include/c++/9/bits/locale_facets_nonio.h:
-
-/usr/include/c++/9/locale:
 
 /home/sangjun/QT_TCP/include/JoystickOnex.h:
 
@@ -5927,11 +5936,39 @@ CMakeFiles/QtTCPClient.dir/src/main.cpp.o: /home/sangjun/QT_TCP/src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtemporarydir.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcalendarwidget.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlistmodel.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstorageinfo.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstate.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstandardpaths.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsortfilterproxymodel.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qquaternion.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsignaltransition.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qopenglvertexarrayobject.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsignalmapper.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsettings.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsequentialanimationgroup.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsemaphore.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qscopeguard.h:
+
 /home/sangjun/QT_TCP/include/TcpCommunication.hpp:
 
 /usr/include/eigen3/Eigen/src/Geometry/Quaternion.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qsortfilterproxymodel.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h:
 
@@ -6067,10 +6104,6 @@ CMakeFiles/QtTCPClient.dir/src/main.cpp.o: /home/sangjun/QT_TCP/src/main.cpp \
 
 /usr/include/c++/9/cerrno:
 
-/usr/include/c++/9/bits/fstream.tcc:
-
-/usr/include/c++/9/ext/aligned_buffer.h:
-
 /usr/include/eigen3/Eigen/src/Core/Matrix.h:
 
 /usr/include/c++/9/bits/stl_list.h:
@@ -6115,8 +6148,6 @@ CMakeFiles/QtTCPClient.dir/src/main.cpp.o: /home/sangjun/QT_TCP/src/main.cpp \
 
 /usr/include/c++/9/bits/ostream_insert.h:
 
-/home/sangjun/QT_TCP/include/LocationInfo.hpp:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h:
@@ -6156,6 +6187,8 @@ CMakeFiles/QtTCPClient.dir/src/main.cpp.o: /home/sangjun/QT_TCP/src/main.cpp \
 /usr/include/math.h:
 
 /usr/include/c++/9/bits/locale_facets.h:
+
+/usr/include/c++/9/bits/locale_conv.h:
 
 /usr/include/c++/9/bits/basic_ios.h:
 
@@ -6213,6 +6246,12 @@ CMakeFiles/QtTCPClient.dir/src/main.cpp.o: /home/sangjun/QT_TCP/src/main.cpp \
 
 /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollbar.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsocketnotifier.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractnativeeventfilter.h:
+
 /usr/include/errno.h:
 
 /usr/include/c++/9/bits/char_traits.h:
@@ -6255,15 +6294,15 @@ CMakeFiles/QtTCPClient.dir/src/main.cpp.o: /home/sangjun/QT_TCP/src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetworkglobal.h:
 
+/usr/include/c++/9/bits/quoted_string.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h:
 
 /usr/include/sched.h:
 
-/usr/include/c++/9/bits/locale_facets_nonio.tcc:
-
-/usr/include/c++/9/ext/atomicity.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h:
+
+/home/sangjun/QT_TCP/include/MapGenerator.hpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h:
 
@@ -6503,8 +6542,6 @@ CMakeFiles/QtTCPClient.dir/src/main.cpp.o: /home/sangjun/QT_TCP/src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qstate.h:
-
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/c++/9/bits/streambuf.tcc:
@@ -6695,6 +6732,12 @@ QtTCPClient_autogen/mocs_compilation.cpp:
 
 /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedvaluerollback.h:
+
+/usr/include/c++/9/bits/exception_ptr.h:
+
+/usr/include/c++/9/bits/std_abs.h:
+
 /usr/include/c++/9/bits/stl_heap.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicstransform.h:
@@ -6767,10 +6810,6 @@ QtTCPClient_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qopenglvertexarrayobject.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qsignalmapper.h:
-
 /usr/include/c++/9/bits/localefwd.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h:
@@ -6821,8 +6860,6 @@ QtTCPClient_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/9/bits/cxxabi_forced.h:
 
-/home/sangjun/QT_TCP/include/LidarInfo.hpp:
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
@@ -6845,12 +6882,6 @@ QtTCPClient_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qpluginloader.h:
 
-/usr/include/c++/9/iomanip:
-
-/usr/include/eigen3/Eigen/src/Core/Random.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:
-
 /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlcdnumber.h:
@@ -6863,12 +6894,6 @@ QtTCPClient_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/9/array:
 
-/usr/include/c++/9/bits/codecvt.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h:
-
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/c++/9/bits/alloc_traits.h:
@@ -6876,6 +6901,10 @@ QtTCPClient_autogen/mocs_compilation.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qfontcombobox.h:
 
 /usr/include/c++/9/bits/stringfwd.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstatemachine.h:
+
+/usr/include/eigen3/Eigen/src/Core/Swap.h:
 
 /usr/include/c++/9/bits/exception_defines.h:
 
@@ -6932,10 +6961,6 @@ QtTCPClient_autogen/ACFNVX7YGT/moc_mainwindow.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimeline.h:
 
 /usr/include/ctype.h:
-
-/usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer:
 
 /usr/include/linux/types.h:
 
@@ -7155,8 +7180,6 @@ QtTCPClient_autogen/ACFNVX7YGT/moc_mainwindow.cpp:
 
 /usr/include/eigen3/Eigen/QR:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qsettings.h:
-
 /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
 
 /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
@@ -7195,6 +7218,12 @@ QtTCPClient_autogen/ACFNVX7YGT/moc_mainwindow.cpp:
 
 /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedmemory.h:
+
+/usr/include/c++/9/bits/stl_tempbuf.h:
+
+/usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
+
 /usr/include/c++/9/bits/shared_ptr_base.h:
 
 /usr/include/eigen3/Eigen/src/Core/Array.h:
@@ -7212,6 +7241,10 @@ QtTCPClient_autogen/ACFNVX7YGT/moc_mainwindow.cpp:
 /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h:
 
 /usr/include/eigen3/Eigen/src/Core/StableNorm.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h:
+
+/usr/include/eigen3/Eigen/src/Core/Stride.h:
 
 /usr/include/eigen3/Eigen/src/Core/MapBase.h:
 
@@ -7273,12 +7306,6 @@ QtTCPClient_autogen/ACFNVX7YGT/moc_mainwindow.cpp:
 
 /usr/include/eigen3/Eigen/src/Core/products/Parallelizer.h:
 
-/usr/include/c++/9/bits/stl_tempbuf.h:
-
-/usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedmemory.h:
-
 /usr/include/c++/9/bits/stl_raw_storage_iter.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h:
@@ -7312,6 +7339,10 @@ QtTCPClient_autogen/ACFNVX7YGT/moc_mainwindow.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QSize:
 
 /usr/include/eigen3/Eigen/src/Core/Select.h:
+
+/usr/include/c++/9/ext/aligned_buffer.h:
+
+/usr/include/c++/9/bits/fstream.tcc:
 
 /usr/include/c++/9/ctime:
 
@@ -7354,10 +7385,6 @@ QtTCPClient_autogen/ACFNVX7YGT/moc_mainwindow.cpp:
 /usr/include/eigen3/Eigen/Householder:
 
 /usr/include/eigen3/Eigen/src/Householder/BlockHouseholder.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcalendarwidget.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlistmodel.h:
 
 /usr/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
 
@@ -7411,6 +7438,46 @@ QtTCPClient_autogen/ACFNVX7YGT/moc_mainwindow.cpp:
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h:
 
+/home/sangjun/QT_TCP/include/SensorInfo.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfilesystemwatcher.h:
+
+/usr/include/c++/9/fstream:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h:
+
+/usr/include/c++/9/bits/codecvt.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h:
+
+/usr/include/eigen3/Eigen/src/Core/Random.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:
+
+/usr/include/c++/9/iomanip:
+
+/usr/include/c++/9/locale:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QThread:
+
+/usr/include/c++/9/bits/locale_facets_nonio.h:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h:
+
+/usr/include/libintl.h:
+
+/usr/include/c++/9/ext/atomicity.h:
+
+/usr/include/c++/9/bits/locale_facets_nonio.tcc:
+
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
 QtTCPClient_autogen/ACFNVX7YGT/moc_qcustomplot.cpp:
@@ -7430,8 +7497,6 @@ QtTCPClient_autogen/ACFNVX7YGT/moc_qcustomplot.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qsemaphore.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/QMouseEvent:
 
@@ -7477,12 +7542,6 @@ QtTCPClient_autogen/ACFNVX7YGT/moc_qcustomplot.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcbormap.h:
 
-/usr/include/c++/9/bits/exception_ptr.h:
-
-/usr/include/c++/9/bits/std_abs.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedvaluerollback.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborstream.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolumnview.h:
@@ -7514,8 +7573,6 @@ QtTCPClient_autogen/ACFNVX7YGT/moc_qcustomplot.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborvalue.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qfileselector.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qfilesystemwatcher.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qfuture.h:
 
@@ -7568,31 +7625,3 @@ QtTCPClient_autogen/ACFNVX7YGT/moc_qcustomplot.cpp:
 /usr/include/c++/9/random:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qresource.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qscopeguard.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qsequentialanimationgroup.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qquaternion.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qsignaltransition.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollbar.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractnativeeventfilter.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qsocketnotifier.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qstandardpaths.h:
-
-/usr/include/eigen3/Eigen/src/Core/Swap.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qstatemachine.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qstorageinfo.h:
-
-/usr/include/eigen3/Eigen/src/Core/Stride.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h:

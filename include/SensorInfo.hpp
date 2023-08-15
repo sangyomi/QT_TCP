@@ -11,4 +11,14 @@ typedef struct _LIDAR_
     double scanRanges[1500];
 } LIDAR, * pLIDAR;
 
+typedef struct _GPS_
+{
+    double latitudeCoordinate;
+    double longitudeCoordinate;
+    double latitudeCoordinateInfo[3000];
+    double longitudeCoordinateInfo[3000];
+    double distance;
+    int count;
+} GPS, * pGPS;
+
 #endif //CAMEL_RAISIM_PROJECTS_LIDARINFO_HPP

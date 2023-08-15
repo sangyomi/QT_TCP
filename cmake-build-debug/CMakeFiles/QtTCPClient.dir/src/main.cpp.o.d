@@ -732,7 +732,7 @@ CMakeFiles/QtTCPClient.dir/src/main.cpp.o: \
  /home/sangjun/QT_TCP/src/../include/JoystickInfo.hpp \
  /home/sangjun/QT_TCP/src/../include/ThreadGenerator.hpp \
  /home/sangjun/QT_TCP/src/../include/LocationInfo.hpp \
- /home/sangjun/QT_TCP/src/../include/LidarInfo.hpp \
+ /home/sangjun/QT_TCP/src/../include/SensorInfo.hpp \
  /home/sangjun/QT_TCP/src/../canine_gui/include/canine_gui/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
@@ -815,5 +815,5 @@ CMakeFiles/QtTCPClient.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpagesize.h \
  /home/sangjun/QT_TCP/include/../include/SharedMemory.hpp \
  /home/sangjun/QT_TCP/include/../include/RobotDescription.hpp \
- /home/sangjun/QT_TCP/include/../include/LocationInfo.hpp \
- /home/sangjun/QT_TCP/include/../include/LidarInfo.hpp
+ /home/sangjun/QT_TCP/include/../include/SensorInfo.hpp \
+ /home/sangjun/QT_TCP/include/../include/MapGenerator.hpp

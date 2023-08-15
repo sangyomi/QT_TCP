@@ -23,46 +23,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcc07e31-9c4c-4367-a10f-779454c60c59" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/canine_gui/include/canine_gui/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/canine_gui/include/canine_gui/mainwindow.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/canine_gui/include/canine_gui/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/canine_gui/include/canine_gui/mainwindow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/canine_gui/include/canine_gui/ui_mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/canine_gui/include/canine_gui/ui_mainwindow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/QtTCPClient_autogen/mocs_compilation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/QtTCPClient_autogen/mocs_compilation.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/QtTCPClient_autogen/mocs_compilation.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/QtTCPClient_autogen/mocs_compilation.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/canine_gui/include/canine_gui/mainwindow.cpp.o.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/compiler_depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/src/TcpCommunication.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/src/TcpCommunication.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/src/TcpCommunication.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/src/TcpCommunication.cpp.o.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/src/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/src/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/src/main.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient.dir/src/main.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient_autogen.dir/AutogenInfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient_autogen.dir/AutogenUsed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient_autogen.dir/AutogenUsed.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient_autogen.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient_autogen.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient_autogen.dir/ParseCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient_autogen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/QtTCPClient_autogen.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/QtTCPClient" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/QtTCPClient" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/QtTCPClient_autogen/ACFNVX7YGT/moc_mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/QtTCPClient_autogen/ACFNVX7YGT/moc_mainwindow.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/canine_gui/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/canine_gui/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/canine_gui/CMakeFiles/canine_gui.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/canine_gui/CMakeFiles/canine_gui.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/canine_gui/CMakeFiles/canine_gui.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/canine_gui/CMakeFiles/canine_gui.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/canine_gui/CMakeFiles/canine_gui.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/canine_gui/CMakeFiles/canine_gui.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/canine_gui/CMakeFiles/canine_gui_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/canine_gui/CMakeFiles/canine_gui_autogen.dir/AutogenInfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/canine_gui/CMakeFiles/canine_gui_autogen.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/canine_gui/CMakeFiles/canine_gui_autogen.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/canine_gui/CMakeFiles/canine_gui_autogen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/canine_gui/CMakeFiles/canine_gui_autogen.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/canine_gui/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/canine_gui/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/LidarInfo.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/SensorInfo.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/TcpCommunication.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/TcpCommunication.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TcpCommunication.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/TcpCommunication.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
@@ -87,9 +63,9 @@
     <option name="majorVersion" value="2023" />
     <option name="minorVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2O3QqyNngSX7dAGYMqTKTmtknj8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -103,7 +79,7 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/home/sangjun/QT_TCP/cmake-build-debug",
+    "last_opened_file_path": "/home/sangjun/untitled1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -127,12 +103,12 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.QtTCPClient">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="QtTCPClient" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="QtTCPClient" TARGET_NAME="QtTCPClient" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="QtTCPClient" RUN_TARGET_NAME="QtTCPClient">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QtTCPClient" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="QtTCPClient" TARGET_NAME="QtTCPClient" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="QtTCPClient" RUN_TARGET_NAME="QtTCPClient">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -300,6 +276,7 @@
       <workItem from="1690521783813" duration="2585000" />
       <workItem from="1690783399706" duration="3715000" />
       <workItem from="1691566764108" duration="12831000" />
+      <workItem from="1692064005654" duration="110000" />
     </task>
     <servers />
   </component>

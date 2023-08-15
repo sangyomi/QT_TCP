@@ -732,4 +732,4 @@ CMakeFiles/QtTCPClient.dir/src/TcpCommunication.cpp.o: \
  /home/sangjun/QT_TCP/src/../include/JoystickInfo.hpp \
  /home/sangjun/QT_TCP/src/../include/ThreadGenerator.hpp \
  /home/sangjun/QT_TCP/src/../include/LocationInfo.hpp \
- /home/sangjun/QT_TCP/src/../include/LidarInfo.hpp
+ /home/sangjun/QT_TCP/src/../include/SensorInfo.hpp

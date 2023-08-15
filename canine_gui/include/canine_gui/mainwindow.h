@@ -8,8 +8,9 @@
 #include <QWebEngineView>
 #include "../include/SharedMemory.hpp"
 #include "../include/RobotDescription.hpp"
-#include "../include/LocationInfo.hpp"
-#include "../include/LidarInfo.hpp"
+#include "../include/SensorInfo.hpp"
+#include "../include/MapGenerator.hpp"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -62,5 +63,6 @@ private:
     double angle;
     QWebEngineView view;
     double lidarTable[1000][1000];
+    MapGenerator MAP;
 };
 #endif // MAINWINDOW_H

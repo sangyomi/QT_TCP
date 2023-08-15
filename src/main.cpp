@@ -10,7 +10,7 @@ pBUTTON joystickButton;
 pUI_COMMAND sharedCommand;
 pSHM sharedMemory;
 pCUSTOM_DATA sharedCustom;
-pGPS_DATA locationInfo;
+pGPS gpsInfo;
 pLIDAR lidarInfo;
 
 class CommunicationThread : public QThread

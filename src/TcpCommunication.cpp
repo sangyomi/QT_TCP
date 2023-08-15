@@ -8,7 +8,7 @@ extern pBUTTON joystickButton;
 extern pUI_COMMAND sharedCommand;
 extern pSHM sharedMemory;
 extern pCUSTOM_DATA sharedCustom;
-extern pGPS_DATA locationInfo;
+extern pGPS gpsInfo;
 extern pLIDAR lidarInfo;
 
 pthread_t JoystickReader;
@@ -204,6 +204,10 @@ void deserializeSharedMemoryInfo (QDataStream &stream)
     // LIDAR_DATA
     stream >> lidarInfo->scanSize;
     stream.readRawData(reinterpret_cast<char*>(lidarInfo->scanRanges), lidarInfo->scanSize * sizeof(double));
+
+    // GPS_DATA
+    stream >> gpsInfo->latitudeCoordinate;
+    stream >> gpsInfo->longitudeCoordinate;
 }
 
 void printJoystickValue()
@@ -381,51 +385,23 @@ double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
 
 void* mapGenerator(void* arg)
 {
-    //
-    locationInfo->latitudeCoordinate = 35.231944;
-    locationInfo->longitudeCoordinate = 129.083333;
-    //
-    locationInfo->distance = 0;
+    gpsInfo->distance = 0;
     while(true)
     {
-        locationInfo->latitudeCoordinateInfo[locationInfo->count] = locationInfo->latitudeCoordinate;
-        locationInfo->longitudeCoordinateInfo[locationInfo->count] = locationInfo->longitudeCoordinate;
-        //
-        if(locationInfo->count < 30)
-        {
-            locationInfo->latitudeCoordinate += 0.00002;
-            locationInfo->longitudeCoordinate += 0.00005;
-        }
-        else if(locationInfo->count < 60)
-        {
-            locationInfo->latitudeCoordinate += 0.00004;
-            locationInfo->longitudeCoordinate += -0.00003;
-        }
-        else
-        {
-            locationInfo->latitudeCoordinate += 0.00006;
-            locationInfo->longitudeCoordinate += -0.00002;
-        }
-        //
+        gpsInfo->latitudeCoordinateInfo[gpsInfo->count] = gpsInfo->latitudeCoordinate;
+        gpsInfo->longitudeCoordinateInfo[gpsInfo->count] = gpsInfo->longitudeCoordinate;
+
         std::cout.precision(9);
-        if (locationInfo->count > 0)
+        if (gpsInfo->count > 0)
         {
-            locationInfo->distance += calculateDistance(locationInfo->latitudeCoordinateInfo[locationInfo->count],locationInfo->longitudeCoordinateInfo[locationInfo->count],
-                                                        locationInfo->latitudeCoordinateInfo[locationInfo->count - 1],locationInfo->longitudeCoordinateInfo[locationInfo->count - 1]);
+            gpsInfo->distance += calculateDistance(gpsInfo->latitudeCoordinateInfo[gpsInfo->count],gpsInfo->longitudeCoordinateInfo[gpsInfo->count],
+                                                   gpsInfo->latitudeCoordinateInfo[gpsInfo->count - 1],gpsInfo->longitudeCoordinateInfo[gpsInfo->count - 1]);
         }
-        Map.generateHTMLFile(locationInfo->latitudeCoordinate,locationInfo->longitudeCoordinate, 18, "map.html");
+        Map.generateHTMLFile(gpsInfo->latitudeCoordinate,gpsInfo->longitudeCoordinate, 18, "map.html");
         usleep(1000000);
-        locationInfo->count++;
+        gpsInfo->count++;
     }
 }
-
-void SavedMapGenerator()
-{
-    locationInfo->latitudeCoordinate = 35.231944;
-    locationInfo->longitudeCoordinate = 129.083333;
-    Map.generateHTMLFile(locationInfo->latitudeCoordinate,locationInfo->longitudeCoordinate, 16, "savedmap.html");
-}
-
 
 void StartCommunication()
 {
@@ -434,10 +410,8 @@ void StartCommunication()
     sharedCommand = (pUI_COMMAND)malloc(sizeof(UI_COMMAND));
     sharedMemory = (pSHM)malloc(sizeof(SHM));
     sharedCustom = (pCUSTOM_DATA)malloc(sizeof(CUSTOM_DATA));
-    locationInfo = (pGPS_DATA)malloc(sizeof(GPS_DATA));
+    gpsInfo = (pGPS)malloc(sizeof(GPS));
     lidarInfo = (pLIDAR)malloc(sizeof(LIDAR));
-
-    SavedMapGenerator();
 
     int thread_id_nrt = generate_nrt_thread(JoystickReader, ReadJoystick, "joystick_thread", 4, NULL);
     sleep(1);

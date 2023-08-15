@@ -1,11 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <iostream>
-
 extern pUI_COMMAND sharedCommand;
 extern pSHM sharedMemory;
 extern pCUSTOM_DATA sharedCustom;
-extern pGPS_DATA locationInfo;
+extern pGPS gpsInfo;
 extern pLIDAR lidarInfo;
 
 MainWindow::MainWindow(QWidget *parent)
@@ -16,8 +15,8 @@ MainWindow::MainWindow(QWidget *parent)
     InitLineEdit();
     InitTable(ui->TW_MOTOR);
     GraphInitialize();
-    SavedMapInitialize();
-    QTimer::singleShot(2000, this, &MainWindow::SavedMapGenerator);
+//    SavedMapInitialize();
+//    QTimer::singleShot(100000, this, &MainWindow::SavedMapGenerator);
     GpsInitialize();
 
     displayTimer = new QTimer();
@@ -37,9 +36,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(gpsTimer, SIGNAL(timeout()), this, SLOT(GpsUpdate()));
     gpsTimer->start(1000);
 
-    savedMapTimer = new QTimer();
-    connect(savedMapTimer, SIGNAL(timeout()), this, SLOT(SavedMapUpdate()));
-    savedMapTimer->start(1000);
+//    savedMapTimer = new QTimer();
+//    connect(savedMapTimer, SIGNAL(timeout()), this, SLOT(SavedMapUpdate()));
+//    savedMapTimer->start(1000);
 
     lidarTimer = new QTimer();
     connect(lidarTimer, SIGNAL(timeout()), this, SLOT(LidarUpdate()));
@@ -794,8 +793,10 @@ void MainWindow::SavedMapInitialize()
     view.show();
 }
 
+
 void MainWindow::SavedMapGenerator()
 {
+
     QString savePath = "/home/sangjun/QT_TCP/cmake-build-debug/";
     QString fileName = "savedmap.png";
 
@@ -817,9 +818,9 @@ void MainWindow::SavedMapUpdate()
     pen.setWidth(3);
     painter.setPen(pen);
     //
-    int xpos = 50000.0*(locationInfo->longitudeCoordinateInfo[locationInfo->count] - 129.083333) + 200.0;
-    int ypos = -50000.0*(locationInfo->latitudeCoordinateInfo[locationInfo->count] - 35.231944) + 250.0;
-    //
+    int xpos = (43000) * (gpsInfo->longitudeCoordinateInfo[gpsInfo->count] - gpsInfo->longitudeCoordinateInfo[3]) + 200.0;
+    int ypos = (-43000 * 1.26) * (gpsInfo->latitudeCoordinateInfo[gpsInfo->count] - gpsInfo->latitudeCoordinateInfo[3]) + 250.0;
+    //대한민국 기준 위도와 경도의 거리차는 1도 당 1.26배로 위도 1도의 길이가 더 길다
     QPoint point(xpos, ypos);
     painter.drawPoint(point);
     painter.end();
@@ -838,26 +839,42 @@ void MainWindow::GpsInitialize()
 
 void MainWindow::GpsUpdate()
 {
-    angle += 10;
+    if(gpsInfo->count == 1)
+    {
+        MAP.generateHTMLFile(gpsInfo->latitudeCoordinate,gpsInfo->longitudeCoordinate, 16, "savedmap.html");
+    }
+    if(gpsInfo->count == 3)
+    {
+        SavedMapInitialize();
+    }
+    if(gpsInfo->count == 5)
+    {
+        SavedMapGenerator();
+    }
+    if(gpsInfo->count > 5)
+    {
+        SavedMapUpdate();
+    }
+//    angle += 10;
     ui->GOOGLE_MAP->reload();
     QPixmap rotatedImage = ui->ArrowImage.transformed(QMatrix().rotate(angle));
     ui->arrow->setPixmap(rotatedImage);
 
-    QString text1 = "      Distance:" + QString::number(locationInfo->distance, 'f', 5)  + "m";
+    QString text1 = "      Distance:" + QString::number(gpsInfo->distance, 'f', 5)  + "m";
     QFont font1 = ui->DistanceInfo->font();
-    font1.setPointSize(25);
+    font1.setPointSize(15);
     ui->DistanceInfo->setText(text1);
     ui->DistanceInfo->setFont(font1);
 
-    QString text2 = "|         Latitude:" + QString::number(locationInfo->latitudeCoordinate, 'f', 5);
+    QString text2 = "|         Latitude:" + QString::number(gpsInfo->latitudeCoordinate, 'f', 5);
     QFont font2 = ui->latPosCoordinate->font();
-    font2.setPointSize(25);
+    font2.setPointSize(15);
     ui->latPosCoordinate->setText(text2);
     ui->latPosCoordinate->setFont(font2);
 
-    QString text3 = "|         Longitude:" + QString::number(locationInfo->longitudeCoordinate, 'f', 5);
+    QString text3 = "|         Longitude:" + QString::number(gpsInfo->longitudeCoordinate, 'f', 5);
     QFont font3 = ui->lonPosCoordinate->font();
-    font3.setPointSize(25);
+    font3.setPointSize(15);
     ui->lonPosCoordinate->setText(text3);
     ui->lonPosCoordinate->setFont(font3);
 }
